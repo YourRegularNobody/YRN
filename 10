@@ -1,0 +1,164 @@
+	local me = game.Players.LocalPlayer
+		local mec = me.Character
+		local hum = mec.Humanoid
+		
+		local lhand = mec.LeftHand
+		local l_larm = mec.LeftLowerArm
+		local l_uarm = mec.LeftUpperArm
+		local lfoot = mec.LeftFoot
+		local l_lleg = mec.LeftLowerLeg
+		local l_uleg = mec.LeftUpperLeg
+		
+		local rhand = mec.RightHand
+		local r_larm = mec.RightLowerArm
+		local r_uarm = mec.RightUpperArm
+		local rfoot = mec.RightFoot
+		local r_uleg = mec.RightUpperLeg
+		local r_lleg = mec.RightLowerLeg
+		
+		local upt = mec.UpperTorso
+		local lt = mec.LowerTorso
+		local root = mec.HumanoidRootPart
+		local head = mec.Head
+		
+		--LeftHand
+		lhand.DescendantAdded:Connect(function(obj)
+			wait()
+			lhand.LeftWrist.Part0 = l_larm
+			lhand.LeftWrist.Part1 = lhand
+		end)
+		--LeftLowerArm
+		l_larm.DescendantAdded:Connect(function(obj)
+			wait()
+			l_larm.LeftElbow.Part0 = l_uarm
+			l_larm.LeftElbow.Part1 = l_larm
+		end)
+		--LeftUpperArm
+		l_uarm.DescendantAdded:Connect(function(obj)
+			wait()
+			l_uarm.LeftShoulder.Part0 = upt
+			l_uarm.LeftShoulder.Part1 = l_uarm
+		end)
+		--LeftFoot
+		lfoot.DescendantAdded:Connect(function(obj)
+			wait()
+			lfoot.LeftAnkle.Part0 = l_lleg
+			lfoot.LeftAnkle.Part1 = lfoot
+		end)
+		--LeftLowerLeg
+		l_lleg.DescendantAdded:Connect(function(obj)
+			wait()
+			l_lleg.LeftKnee.Part0 = l_uleg
+			l_lleg.LeftKnee.Part1 = l_lleg
+		end)
+		--LeftUpperLeg
+		l_uleg.DescendantAdded:Connect(function(obj)
+			wait()
+			l_uleg.LeftHip.Part0 = lt
+			l_uleg.LeftHip.Part1 = l_uleg
+		end)
+		
+		--RightHand
+		rhand.DescendantAdded:Connect(function(obj)
+			wait()
+			rhand.RightWrist.Part0 = r_larm
+			rhand.RightWrist.Part1 = rhand
+		end)
+		--RightLowerArm
+		r_larm.DescendantAdded:Connect(function(obj)
+			wait()
+			r_larm.RightElbow.Part0 = r_uarm
+			r_larm.RightElbow.Part1 = r_larm
+		end)
+		--RightUpperArm
+		r_uarm.DescendantAdded:Connect(function(obj)
+			wait()
+			r_uarm.RightShoulder.Part0 = upt
+			r_uarm.RightShoulder.Part1 = r_uarm
+		end)
+		--RightFoot
+		rfoot.DescendantAdded:Connect(function(obj)
+			wait()
+			rfoot.RightAnkle.Part0 = r_lleg
+			rfoot.RightAnkle.Part1 = rfoot
+		end)
+		--RightLowerLeg
+		r_lleg.DescendantAdded:Connect(function(obj)
+			wait()
+			r_lleg.RightKnee.Part0 = r_uleg
+			r_lleg.RightKnee.Part1 = r_lleg
+		end)
+		--RightUpperLeg
+		r_uleg.DescendantAdded:Connect(function(obj)
+			wait()
+			r_uleg.RightHip.Part0 = lt
+			r_uleg.RightHip.Part1 = r_uleg
+		end)
+		
+		
+		--UpperTorso
+		upt.DescendantAdded:Connect(function(obj)
+			wait()
+			upt.Waist.Part0 = lt
+			upt.Waist.Part1 = upt
+		end)
+		--LowerTorso
+		lt.DescendantAdded:Connect(function(obj)
+			wait()
+			lt.Root.Part0 = root
+			lt.Root.Part1 = lt
+		end)
+		--Head
+		head.DescendantAdded:Connect(function(obj)
+			wait()
+			head.Neck.Part0 = upt
+			head.Neck.Part1 = head
+		end)
+		
+		--Additions
+		--1
+		for i,v in pairs(game:GetService("Players")["LocalPlayer"].Character:GetDescendants()) do
+			if v.Name == "KOd" and v:IsA("BoolValue") then
+				v:Destroy()
+			end
+		end
+		
+		game:GetService("Players")["LocalPlayer"].Character.DescendantAdded:Connect(function(obj)
+			if obj:IsA("BoolValue") and obj.Name == "KOd" then
+				wait()
+				obj:Destroy()
+			end
+		end)
+		--2
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+			if v.Name == "Bone" and v:IsA("Part") then
+				v:Destroy()
+			end
+		end
+		
+		game.Players.LocalPlayer.Character.DescendantAdded:Connect(function(obj)
+			if obj:IsA("Part") and obj.Name == "Bone" then
+				wait()
+				obj:Destroy()
+			end
+		end)
+		--3
+		while true do
+			wait()
+			hum.PlatformStand = false
+		end
+		--4
+		for i,v in pairs(game:GetService("Players")["LocalPlayer"].Character:GetDescendants()) do
+			if v.Name == "KOd" and v:IsA("Folder") then
+				v:Destroy()
+			end
+		end
+		--5
+		game:GetService("Players")["LocalPlayer"].Character.DescendantAdded:Connect(function(obj)
+			if obj:IsA("Folder") and obj.Name == "KOd" then
+				wait()
+				obj:Destroy()
+			end
+		end)
+		
+		
