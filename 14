@@ -1,0 +1,100 @@
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
+while wait() do
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v:isA("Tool") then
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+wait()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+end
+end
+wait(0.1)
