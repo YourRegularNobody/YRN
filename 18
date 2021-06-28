@@ -29,7 +29,6 @@ print "f1,fling1                      - Flings the player."
 print "f2,fling2                      - Another method of fling."
 print "f1,fling1                      - Flings the player."
 print "dra,deleterightarm             - Deletes your right arm."
-print "aa,antiattach                  - Enables antiattach."
 print "grippos                        - Changes the grippos of your tool."
 print "arj,autorejoin                 - Automatically rejoins you after being kicked."
 print "r,reset                        - Resets your character."
@@ -2571,20 +2570,6 @@ AddCommand("deleterightarm", {dra}, "anti tkill :troll:", {3}, function(Caller, 
     Destroy(GetCharacter()["Right Arm"]);
     return "lol"
 end)
-
-AddCommand("antiattach", {"aa"}, "enables antiattach", {3}, function(Caller, Args)
-    local Tools = {}
-    for i, v in next, tbl_concat(GetChildren(LocalPlayer.Character), GetChildren(LocalPlayer.Backpack)) do
-        if (IsA(v, "Tool")) then
-            Tools[#Tools + 1] = v
-        end
-    end
-    AddConnection(CConnect(LocalPlayer.Character.ChildAdded, function(x)
-        if not (Tfind(Tools, x)) then
-            x.Parent = LocalPlayer.Backpack
-        end
-    end))
-end)	
 
 AddCommand("grippos", {}, "changes grippos of your tool", {"3"}, function(Caller, Args, Tbl)
     local Tool = FindFirstChildWhichIsA(GetCharacter(), "Tool") or FindFirstChildWhichIsA(LocalPlayer.Backpack, "Tool");
