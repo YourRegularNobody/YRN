@@ -31,7 +31,6 @@ print "f1,fling1                      - Flings the player."
 print "dra,deleterightarm             - Deletes your right arm."
 print "grippos                        - Changes the grippos of your tool."
 print "arj,autorejoin                 - Automatically rejoins you after being kicked."
-print "r,reset                        - Resets your character."
 print "btools                         - Gives you client sided building tools."
 print "to,goto                        - Teleports you to the player."
 print "loopto,loopgoto                - Loop teleports you to the player."
@@ -2596,12 +2595,6 @@ AddCommand("autorejoin", {"arj"}, "auto rejoins the game when you get kicked", {
     Tbl[#Tbl + 1] = RejoinConnection
     return "auto rejoin enabled (rejoins when you get kicked from the game)"
 end)
-
-AddCommand("reset", {"r"}, "resets your character", {3}, function()
-    local Char = GetCharacter();
-    Char.BreakJoints(Char);
-end)
-
 
 AddCommand("btools", {}, "gives you btools", {3}, function(Caller, Args)
     local BP = LocalPlayer.Backpack
