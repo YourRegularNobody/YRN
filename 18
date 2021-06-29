@@ -2173,6 +2173,22 @@ AddCommand("void1", {"v1"}, "voids a player", {"1",1,3}, function(Caller, Args)
 end)
 
 AddCommand("void2", {"v2"}, "brings a user", {1}, function(Caller, Args)
+    if (Tbl[1]) then
+        Disconnect(Tbl[1]);
+    end
+    local Position = GetRoot().CFrame
+    local Spawn = CConnect(LocalPlayer.CharacterAdded, function()
+        WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = Position
+    end)
+    Tbl[1] = Spawn
+    AddPlayerConnection(LocalPlayer, Spawn);
+    local SpawnLocation = pack(unpack(split(tostring(Position), ", "), 1, 3));
+    SpawnLocation.n = nil
+    return "spawn successfully set to " .. concat(map(SpawnLocation, function(i,v)
+        return tostring(round(tonumber(v)));
+    end), ",");
+end)
+wait(.2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.11721158, -480, -1000000000)
     local Target = GetPlayer(Args[1]);
     local OldPos = GetRoot(Caller).CFrame
