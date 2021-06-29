@@ -8,8 +8,6 @@ print "v1,void1                       - Voids the player."
 print "v2,void2                       - Another method of void."
 print "v,view                         - Views the player."
 print "uv,unview                      - Unviews the player."
-print "lv,loopview                    - Loop views the player."
-print "ulv,unloopview                 - Unloop views the player."
 print "dupet,dupetools                - Dupes your tools."
 print "sd,stopdupe                    - Stops the dupe."
 print "gt,grabtools                   - Grab tools in the workspace."
@@ -2261,30 +2259,6 @@ end)
 AddCommand("unview", {"uv"}, "unviews a user", {3}, function(Caller, Args)
     Camera.CameraSubject = GetHumanoid();
     return "unviewing"
-end)
-
-AddCommand("loopview", {lv}, "loopviews a user", {3, "1"}, function(Caller, Args, Tbl)
-    local Target = GetPlayer(Args[1]);
-    for i, v in next, Target do
-        Camera.CameraSubject = GetHumanoid(v) or GetHumanoid();
-        local LoopView = CConnect(GetPropertyChangedSignal(Camera, "CameraSubject"), function()
-            Camera.CameraSubject = GetHumanoid(v) or GetHumanoid();
-        end)
-        Tbl[v.Name] = LoopView
-        AddPlayerConnection(v, LoopView)
-    end
-end)
-
-AddCommand("unloopview", {ulv}, "unloopviews a user", {3}, function(Caller, Args)
-    local LoopViewing = LoadCommand("loopview").CmdExtra
-    local Target = GetPlayer(Args[1]);
-    for i, v in next, LoopViewing do
-        for i2, v2 in next, Target do
-            if (i == v2.Name) then
-                Disconnect(v);
-            end
-        end
-    end
 end)
 
 AddCommand("dupetools", {"dupet"}, "dupes your tools", {"1", 1, {"protect"}}, function(Caller, Args, Tbl)
