@@ -2,9 +2,6 @@ print "ws,walkspeed                   - Changes your walkspeed."
 print "jp,jumppower                   - Changes your jumppower."
 print "tk1,toolkill1                  - Toolkill the player."
 print "tk2,toolkill2                  - Another method of toolkill."
-print "ltk,looptkill                  - Loop toolkills the player."
-print "ultk,unnlooptkill              - Unloop toolkills someone."
-print "ltk,looptkill                  - Loop toolkills the player."
 print "b1,bring1                      - Brings the player to you."
 print "b2,bring2                      - Another method of bring."
 print "void,punish                    - Voids the player."
@@ -1964,53 +1961,6 @@ AddCommand("tk2", {"toolkill2"}, "another variant of kill", {1, "1"}, function(C
     end
     CWait(LocalPlayer.CharacterAdded);
     WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = OldPos
-end)
-
-AddCommand("looptkill", {"ltk"}, "loopkill loopkills a character", {3,"1"}, function(Caller, Args, Tbl)
-    local Target = GetPlayer(Args[1]);
-    for i, v in next, Target do
-        Tbl[#Tbl + 1] = v
-    end
-    repeat
-        local Character, Humanoid = GetCharacter(), GetHumanoid();
-        UnequipTools(Humanoid);
-        DisableAnimate();
-        Humanoid = ReplaceHumanoid(Humanoid);
-        ChangeState(Humanoid, 15);
-        if (isR6(Target[1])) then
-        end
-        for i = 1, #Target do
-            local v = Target[i]
-            local TargetRoot = GetRoot(v)
-            local Children = GetChildren(LocalPlayer.Backpack);
-            for i2 = 1, #Children do
-                local v2 = Children[i2]
-                if (IsA(v2, "Tool")) then
-                    SpoofInstance(v);
-                    v2.Parent = GetCharacter();
-                    local OldSize = v2.Handle.Size
-                    for i3 = 1, 3 do
-                        if (TargetRoot) then
-                            firetouchinterest(TargetRoot, v2.Handle, 0);
-                            wait();
-                            firetouchinterest(TargetRoot, v2.Handle, 1);
-                        end
-                    end
-                    v2.Handle.Size = OldSize
-                end
-            end
-        end
-        wait(.2);
-        Destroy(LocalPlayer.Character);
-        CWait(LocalPlayer.CharacterAdded);
-        WaitForChild(LocalPlayer.Character, "HumanoidRootPart");
-        wait(1);
-    until not next(LoadCommand("loopkill").CmdExtra) or not GetPlayer(Args[1])
-end)
-
-AddCommand("unlooptkill", {"ultk"}, "unloopkills a user", {3,"1"}, function(Caller, Args)
-    LoadCommand("loopkill").CmdExtra = {}
-    return
 end)
 
 AddCommand("bring1", {"b1"}, "brings a user", {1}, function(Caller, Args)
