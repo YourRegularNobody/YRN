@@ -2408,7 +2408,7 @@ AddCommand("uninfinitejump", {"uninfjump"}, "removes infinite jump", {}, functio
     DisableAllCmdConnections("infinitejump");
 end)
 
-AddCommand("setspawn", {"ss"}, "sets your spawn location to the location you are at", {3}, function(Caller, Args, Tbl)
+AddCommand("setspawn", {}, "sets your spawn location to the location you are at", {3}, function(Caller, Args, Tbl)
     if (Tbl[1]) then
         Disconnect(Tbl[1]);
     end
@@ -2425,7 +2425,7 @@ AddCommand("setspawn", {"ss"}, "sets your spawn location to the location you are
     end), ",");
 end)
 
-AddCommand("removespawn", {"rs"}, "removes your spawn location", {}, function(Caller, Args)
+AddCommand("removespawn", {}, "removes your spawn location", {}, function(Caller, Args)
     local Spawn = LoadCommand("setspawn").CmdExtra[1]
     if (Spawn) then
         Disconnect(Spawn);
