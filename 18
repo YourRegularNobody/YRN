@@ -2110,12 +2110,11 @@ game.Players.LocalPlayer.Character:WaitForChild("Stamina"):Destroy()
         Destroy(LocalPlayer.Character);
         CWait(LocalPlayer.CharacterAdded);
         WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = OldPos
-	game.Workspace.FallenPartsDestroyHeight = -math.huge
     end
 end)
 
 AddCommand("void2", {"v2"}, "brings a user", {1}, function(Caller, Args)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.11721158, -50000, 0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.11721158, -480, 0)
     local Target = GetPlayer(Args[1]);
     local OldPos = GetRoot(Caller).CFrame
     if (Caller ~= LocalPlayer and Target[1] == LocalPlayer) then
@@ -2187,7 +2186,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.117211
         Destroy(LocalPlayer.Character);
         CWait(LocalPlayer.CharacterAdded);
         WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = OldPos
-	game.Workspace.FallenPartsDestroyHeight = -math.huge
     end
 end)
 
