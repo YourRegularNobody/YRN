@@ -2111,7 +2111,6 @@ game.Players.LocalPlayer.Character:WaitForChild("Stamina"):Destroy()
         CWait(LocalPlayer.CharacterAdded);
         WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = OldPos
 	game.Workspace.FallenPartsDestroyHeight = -math.huge
-game.Players.LocalPlayer.Character:WaitForChild("Stamina"):Destroy()
     end
 end)
 
@@ -2189,7 +2188,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.117211
         CWait(LocalPlayer.CharacterAdded);
         WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = OldPos
 	game.Workspace.FallenPartsDestroyHeight = -math.huge
-game.Players.LocalPlayer.Character:WaitForChild("Stamina"):Destroy()
     end
 end)
 
