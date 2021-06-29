@@ -1,4 +1,4 @@
-print "mghot                          - Tells them "MG's Hub On Top"
+print "mghot                          - Tells them that MG's Hub On Top"
 print "ws,walkspeed                   - Changes your walkspeed."
 print "jp,jumppower                   - Changes your jumppower."
 print "tk1,toolkill1                  - Toolkill the player."
