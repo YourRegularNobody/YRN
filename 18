@@ -1,4 +1,3 @@
-print "mghot                          - Tells them that MG's Hub On Top"
 print "ws,walkspeed                   - Changes your walkspeed."
 print "jp,jumppower                   - Changes your jumppower."
 print "tk1,toolkill1                  - Toolkill the player."
@@ -40,6 +39,7 @@ print "sh,serverhop                   - Makes you join another server."
 print "shiftlock                      - Enables shiftlock in your game."
 print "fc,freecam                     - Roam around freely."
 print "ctp,clicktp                    - Gives you a clicktp tool."
+print "mghot                          - MG's Hub On Top."
 	local function ExecuteScript()
 
 	local CoreGui = game:GetService("StarterGui")
