@@ -1,3 +1,4 @@
+print "mghot                          - Tells them "MG's Hub On Top"
 print "ws,walkspeed                   - Changes your walkspeed."
 print "jp,jumppower                   - Changes your jumppower."
 print "tk1,toolkill1                  - Toolkill the player."
@@ -1960,6 +1961,11 @@ AddCommand("tk2", {"toolkill2"}, "another variant of kill", {1, "1"}, function(C
     end
     CWait(LocalPlayer.CharacterAdded);
     WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = OldPos
+end)
+
+AddCommand("mghot", {}, "", {}, function()
+    local ChatRemote = Services.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+    ChatRemote.FireServer(ChatRemote, "MG's Hub On Top", "All");
 end)
 
 AddCommand("bring1", {"b1"}, "brings a user", {1}, function(Caller, Args)
