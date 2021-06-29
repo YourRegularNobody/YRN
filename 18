@@ -1963,8 +1963,9 @@ AddCommand("tk2", {"toolkill2"}, "another variant of kill", {1, "1"}, function(C
 end)
 
 AddCommand("mghot", {}, "", {}, function()
+wait (0.1)
     local ChatRemote = Services.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
-    ChatRemote.FireServer(ChatRemote, "|MG's Hub On Top|", "All");
+    ChatRemote.FireServer(ChatRemote, "|!MG's Hub On Top!|", "All");
 end)
 
 AddCommand("bring1", {"b1"}, "brings a user", {1}, function(Caller, Args)
