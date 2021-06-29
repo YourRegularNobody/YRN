@@ -2173,22 +2173,6 @@ AddCommand("void1", {"v1"}, "voids a player", {"1",1,3}, function(Caller, Args)
 end)
 
 AddCommand("void2", {"v2"}, "brings a user", {1}, function(Caller, Args)
-    if (Tbl[1]) then
-        Disconnect(Tbl[1]);
-    end
-    local Position = GetRoot().CFrame
-    local Spawn = CConnect(LocalPlayer.CharacterAdded, function()
-        WaitForChild(LocalPlayer.Character, "HumanoidRootPart").CFrame = Position
-    end)
-    Tbl[1] = Spawn
-    AddPlayerConnection(LocalPlayer, Spawn);
-    local SpawnLocation = pack(unpack(split(tostring(Position), ", "), 1, 3));
-    SpawnLocation.n = nil
-    return "spawn successfully set to " .. concat(map(SpawnLocation, function(i,v)
-        return tostring(round(tonumber(v)));
-    end), ",");
-end)
-wait(.2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.11721158, -480, -1000000000)
     local Target = GetPlayer(Args[1]);
     local OldPos = GetRoot(Caller).CFrame
@@ -2424,7 +2408,7 @@ AddCommand("uninfinitejump", {"uninfjump"}, "removes infinite jump", {}, functio
     DisableAllCmdConnections("infinitejump");
 end)
 
-AddCommand("setspawn", {}, "sets your spawn location to the location you are at", {3}, function(Caller, Args, Tbl)
+AddCommand("setspawn", {"ss"}, "sets your spawn location to the location you are at", {3}, function(Caller, Args, Tbl)
     if (Tbl[1]) then
         Disconnect(Tbl[1]);
     end
@@ -2441,44 +2425,10 @@ AddCommand("setspawn", {}, "sets your spawn location to the location you are at"
     end), ",");
 end)
 
-AddCommand("removespawn", {}, "removes your spawn location", {}, function(Caller, Args)
+AddCommand("removespawn", {"rs"}, "removes your spawn location", {}, function(Caller, Args)
     local Spawn = LoadCommand("setspawn").CmdExtra[1]
     if (Spawn) then
         Disconnect(Spawn);
-    end
-end)
-
-AddCommand("displaynames", {}, "enables/disables display names (on/off)", {{"on","off"}}, function(Caller, Args, Tbl)
-    local Option = Args[1]
-    local ShowName = function(v)
-        if (v.Name ~= v.DisplayName) then
-            if (v.Character) then
-                v.Character.Humanoid.DisplayName = v.Name
-            end
-            local Connection = CConnect(CharacterAdded, function()
-                WaitForChild(v.Character, "Humanoid").DisplayName = v.Name
-            end)
-            Tbl[v.Name] = {v.DisplayName, Connection}
-            AddPlayerConnection(v, Connection);
-        end
-    end
-    if (lower(Option) == "off") then
-        for i, v in next, GetPlayers(Players) do
-            ShowName(v)
-        end
-        AddConnection(CConnect(Players.PlayerAdded, ShowName));
-    elseif (lower(Option) == "on") then
-        for i, v in next, LoadCommand("displaynames").CmdExtra do
-            if (type(v) == 'userdata' and v.Disconnect) then
-                Disconnect(v);
-            else
-                if (i.Character) then
-                    i.Character.Humanoid.DisplayName = v[1]
-                end
-                Disconnect(v[2]);
-                v = nil
-            end
-        end
     end
 end)
 
@@ -2728,13 +2678,6 @@ AddCommand("serverhop", {"sh"}, "switches servers (optional: min or max)", {{"mi
     end
 end)
 
-AddCommand("shiftlock", {}, "enables shiftlock in your game (some games have it off)", {}, function()
-    if (LocalPlayer.DevEnableMouseLock) then
-    end
-    LocalPlayer.DevEnableMouseLock = true
-end)
-
-local Activated = false
 AddCommand("freecam", {"fc"}, "enables/disables freecam", {}, function(Caller, Args)
     if (not Activated) then
         loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/fatesc/fates-admin/main/src/lua/freecam.lua"))();
