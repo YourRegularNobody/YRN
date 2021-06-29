@@ -22,7 +22,7 @@ print "removespawn                    - Removes your spawn location."
 print "displaynames                   - Enables/Disables displaynames."
 print "f1,fling1                      - Flings the player."
 print "f2,fling2                      - Another method of fling."
-print "dra,deleterightarm             - Deletes your right arm."
+print "deleterightarm                 - Deletes your right arm."
 print "grippos                        - Changes the grippos of your tool."
 print "arj,autorejoin                 - Automatically rejoins you after being kicked."
 print "btools                         - Gives you client sided building tools."
@@ -2371,7 +2371,7 @@ AddCommand("removespawn", {}, "removes your spawn location", {}, function(Caller
     end
 end)
 
-AddCommand("fling", {"f1"}, "flings a player", {}, function(Caller, Args)
+AddCommand("fling1", {"f1"}, "flings a player", {}, function(Caller, Args)
     local Target = GetPlayer(Args[1]);
     local Root = GetRoot()
     SpoofProperty(Root, "Velocity");
@@ -2465,7 +2465,7 @@ AddCommand("fling2", {"f2"}, "another variant of fling", {}, function(Caller, Ar
     Root.CFrame = OldPos
 end)
 
-AddCommand("deleterightarm", {dra}, "anti tkill :troll:", {3}, function(Caller, Args)
+AddCommand("deleterightarm", {}, "anti tkill :troll:", {3}, function(Caller, Args)
     Destroy(GetCharacter()["Right Arm"]);
     return "lol"
 end)
