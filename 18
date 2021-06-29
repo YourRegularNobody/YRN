@@ -2037,8 +2037,6 @@ end)
 
 AddCommand("void1", {"v1"}, "voids a player", {"1",1,3}, function(Caller, Args)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.11721158, 10000, 1000000000)
-game.Workspace.FallenPartsDestroyHeight = -math.huge
-game.Players.LocalPlayer.Character:WaitForChild("Stamina"):Destroy()
     local Target = GetPlayer(Args[1]);
     local OldPos = GetRoot(Caller).CFrame
     if (Caller ~= LocalPlayer and Target[1] == LocalPlayer) then
