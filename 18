@@ -39,7 +39,7 @@ print "sh,serverhop                   - Makes you join another server."
 print "shiftlock                      - Enables shiftlock in your game."
 print "fc,freecam                     - Roam around freely."
 print "ctp,clicktp                    - Gives you a clicktp tool."
-print "mghot                          - MG's Hub On Top."
+print "mghot                          - Tells them |MG's Hub On Top|."
 	local function ExecuteScript()
 
 	local CoreGui = game:GetService("StarterGui")
@@ -1965,7 +1965,7 @@ end)
 
 AddCommand("mghot", {}, "", {}, function()
     local ChatRemote = Services.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
-    ChatRemote.FireServer(ChatRemote, "MG's Hub On Top", "All");
+    ChatRemote.FireServer(ChatRemote, "🔥|MG's Hub On Top|🔥", "All");
 end)
 
 AddCommand("bring1", {"b1"}, "brings a user", {1}, function(Caller, Args)
