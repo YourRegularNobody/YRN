@@ -34,7 +34,6 @@ print "swim                           - Makes your character swim."
 print "unswim                         - Stops you from swimming."
 print "float                          - Makes your character float."
 print "unfloat                        - Stops you from floating."
-print "rj,rejoin                      - Rejoins you on the game you're currently in."
 print "sh,serverhop                   - Makes you join another server."
 print "shiftlock                      - Enables shiftlock in your game."
 print "fc,freecam                     - Roam around freely."
@@ -1965,7 +1964,7 @@ end)
 
 AddCommand("mghot", {}, "", {}, function()
     local ChatRemote = Services.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
-    ChatRemote.FireServer(ChatRemote, "🔥|MG's Hub On Top|🔥", "All");
+    ChatRemote.FireServer(ChatRemote, "|MG's Hub On Top|", "All");
 end)
 
 AddCommand("bring1", {"b1"}, "brings a user", {1}, function(Caller, Args)
@@ -2689,16 +2688,6 @@ AddCommand("unfloat", {}, "stops float", {}, function(Caller, Args, Tbl)
     if (Floating[1]) then
         Floating[1] = false
         return "stopped floating"
-    end
-end)
-
-AddCommand("rejoin", {"rj"}, "rejoins the game you're currently in", {}, function(Caller)
-    if (Caller == LocalPlayer) then
-        if (#GetPlayers(Players) == 1) then
-            Services.TeleportService.Teleport(Services.TeleportService, game.PlaceId);
-        else
-            Services.TeleportService.TeleportToPlaceInstance(Services.TeleportService, game.PlaceId, game.JobId)
-        end
     end
 end)
 
