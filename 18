@@ -21,7 +21,6 @@ print "setspawn                       - Sets your spawn location to the location
 print "removespawn                    - Removes your spawn location."
 print "f1,fling1                      - Flings the player."
 print "f2,fling2                      - Another method of fling."
-print "deleterightarm                 - Deletes your right arm."
 print "grippos                        - Changes the grippos of your tool."
 print "arj,autorejoin                 - Automatically rejoins you after being kicked."
 print "btools                         - Gives you client sided building tools."
@@ -2462,10 +2461,6 @@ AddCommand("fling2", {"f2"}, "another variant of fling", {}, function(Caller, Ar
     Root.Anchored = false
     Root.Velocity = OldVelocity
     Root.CFrame = OldPos
-end)
-
-AddCommand("deleterightarm", {}, "anti tkill :troll:", {3}, function(Caller, Args)
-    Destroy(GetCharacter()["Right Arm"]);
 end)
 
 AddCommand("grippos", {}, "changes grippos of your tool", {"3"}, function(Caller, Args, Tbl)
