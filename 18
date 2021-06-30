@@ -19,7 +19,6 @@ print "infjump,infinitejump           - Your jump button will have no cooldown."
 print "uninfjump,uninfinitejump       - Your jump button will have cooldown."
 print "setspawn                       - Sets your spawn location to the location where you at."
 print "removespawn                    - Removes your spawn location."
-print "displaynames                   - Enables/Disables displaynames."
 print "f1,fling1                      - Flings the player."
 print "f2,fling2                      - Another method of fling."
 print "deleterightarm                 - Deletes your right arm."
@@ -2467,7 +2466,6 @@ end)
 
 AddCommand("deleterightarm", {}, "anti tkill :troll:", {3}, function(Caller, Args)
     Destroy(GetCharacter()["Right Arm"]);
-    return "lol"
 end)
 
 AddCommand("grippos", {}, "changes grippos of your tool", {"3"}, function(Caller, Args, Tbl)
@@ -2561,7 +2559,7 @@ AddCommand("unswim", {}, "removes swim", {}, function(Caller, Args)
     return "swimming disabled"
 end)
 
-AddCommand("float", {}, "floats your character (uses grass to bypass some ac's)", {}, function(Caller, Args, Tbl)
+AddCommand("float", {"f"}, "floats your character (uses grass to bypass some ac's)", {}, function(Caller, Args, Tbl)
     if (not Tbl[1]) then
         local Part = InstanceNew("Part");
         Part.CFrame = CFrameNew(0, -10000, 0);
@@ -2582,7 +2580,7 @@ AddCommand("float", {}, "floats your character (uses grass to bypass some ac's)"
     end
 end)
 
-AddCommand("unfloat", {}, "stops float", {}, function(Caller, Args, Tbl)
+AddCommand("unfloat", {"uf"}, "stops float", {}, function(Caller, Args, Tbl)
     local Floating = LoadCommand("float").CmdExtra
     if (Floating[1]) then
         Floating[1] = false
