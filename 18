@@ -22,7 +22,6 @@ print "removespawn                    - Removes your spawn location."
 print "f1,fling1                      - Flings the player."
 print "f2,fling2                      - Another method of fling."
 print "grippos                        - Changes the grippos of your tool."
-print "arj,autorejoin                 - Automatically rejoins you after being kicked."
 print "btools                         - Gives you client sided building tools."
 print "to,goto                        - Teleports you to the player."
 print "loopto,loopgoto                - Loop teleports you to the player."
@@ -2468,25 +2467,6 @@ AddCommand("grippos", {}, "changes grippos of your tool", {"3"}, function(Caller
     SpoofProperty(Tool, "GripPos");
     Tool.GripPos = Vector3New(tonumber(Args[1]), tonumber(Args[2]), tonumber(Args[3]));
     Tool.Parent = GetCharacter();
-end)
-
-AddCommand("autorejoin", {"arj"}, "auto rejoins the game when you get kicked", {}, function(Caller, Args, Tbl)    
-    local RejoinConnection = CConnect(FindFirstChildWhichIsA(FindFirstChild(Services.CoreGui, "RobloxPromptGui"), "Frame").DescendantAdded, function(Prompt)
-        if (Prompt.Name == "ErrorTitle") then
-            CWait(GetPropertyChangedSignal(Prompt, "Text"));
-            if (Prompt.Text == "Disconnected") then
-                syn.queue_on_teleport("loadstring(game.HttpGet(game, \"https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua\"))()")
-                if (#GetPlayers(Players) == 1) then
-                    Services.TeleportService.Teleport(Services.TeleportService, game.PlaceId);
-                else
-                    Services.TeleportService.TeleportToPlaceInstance(Services.TeleportService, game.PlaceId, game.JobId)
-                end
-            end
-        end
-    end)
-    AddConnection(RejoinConnection);
-    Tbl[#Tbl + 1] = RejoinConnection
-    return "auto rejoin enabled (rejoins when you get kicked from the game)"
 end)
 
 AddCommand("btools", {}, "gives you btools", {3}, function(Caller, Args)
