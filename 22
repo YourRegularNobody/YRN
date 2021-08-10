@@ -1,0 +1,2049 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Jinxed = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local DropShadow = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local CmdFrame = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Rect = Instance.new("Frame")
+local Line = Instance.new("Frame")
+local Sort = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Cmds = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local Cmd = Instance.new("TextLabel")
+local SearchBoxFrame = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local SearchBox = Instance.new("TextBox")
+local Sectors = Instance.new("Frame")
+local Home = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
+local Tabs = Instance.new("Frame")
+local Main = Instance.new("TextButton")
+local Slider = Instance.new("Frame")
+local Streets = Instance.new("TextButton")
+local Audio = Instance.new("TextButton")
+local Misc = Instance.new("TextButton")
+local Pages = Instance.new("Frame")
+local Main_2 = Instance.new("Frame")
+local TargetBoxFrame = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local TargetBox = Instance.new("TextBox")
+local Check = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local Btn = Instance.new("TextButton")
+local View = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Btn_2 = Instance.new("TextButton")
+local Attach = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local Btn_3 = Instance.new("TextButton")
+local VoidLoop = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Btn_4 = Instance.new("TextButton")
+local FELoop = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local Btn_5 = Instance.new("TextButton")
+local AntiFe = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Btn_6 = Instance.new("TextButton")
+local AntiVoid = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Btn_7 = Instance.new("TextButton")
+local UIPageLayout = Instance.new("UIPageLayout")
+local Streets_2 = Instance.new("Frame")
+local BanBypass = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local Btn_8 = Instance.new("TextButton")
+local GodMode = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local Btn_9 = Instance.new("TextButton")
+local AntiStomp = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local Btn_10 = Instance.new("TextButton")
+local TPBypass = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local Btn_11 = Instance.new("TextButton")
+local NoRope = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local Btn_12 = Instance.new("TextButton")
+local NoSlow = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local Btn_13 = Instance.new("TextButton")
+local Aimlock = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local Btn_14 = Instance.new("TextButton")
+local Camlock = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local Btn_15 = Instance.new("TextButton")
+local Nearest = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local Btn_16 = Instance.new("TextButton")
+local Capture = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local Btn_17 = Instance.new("TextButton")
+local TargetBoxFrame_2 = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+local TargetBox_2 = Instance.new("TextBox")
+local Audio_2 = Instance.new("Frame")
+local ClientSided = Instance.new("Frame")
+local UICorner_24 = Instance.new("UICorner")
+local Btn_18 = Instance.new("TextButton")
+local Play = Instance.new("Frame")
+local UICorner_25 = Instance.new("UICorner")
+local Btn_19 = Instance.new("TextButton")
+local AudioBoxFrame = Instance.new("Frame")
+local UICorner_26 = Instance.new("UICorner")
+local AudioBox = Instance.new("TextBox")
+local Stop = Instance.new("Frame")
+local UICorner_27 = Instance.new("UICorner")
+local Btn_20 = Instance.new("TextButton")
+local MassPlay = Instance.new("Frame")
+local UICorner_28 = Instance.new("UICorner")
+local Btn_21 = Instance.new("TextButton")
+local TimePosBoxFrame = Instance.new("Frame")
+local UICorner_29 = Instance.new("UICorner")
+local TimePosBox = Instance.new("TextBox")
+local Sync = Instance.new("Frame")
+local UICorner_30 = Instance.new("UICorner")
+local Btn_22 = Instance.new("TextButton")
+local Regular = Instance.new("Frame")
+local UICorner_31 = Instance.new("UICorner")
+local Btn_23 = Instance.new("TextButton")
+local Streets_3 = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local Btn_24 = Instance.new("TextButton")
+local Misc_2 = Instance.new("Frame")
+local Notification = Instance.new("Frame")
+local UICorner_33 = Instance.new("UICorner")
+local Text = Instance.new("TextLabel")
+local DropShadow_2 = Instance.new("Frame")
+local UICorner_34 = Instance.new("UICorner")
+local Title_3 = Instance.new("TextLabel")
+local Visibility = Instance.new("ImageLabel")
+
+--Properties:
+
+Jinxed.Name = "Jinxed"
+Jinxed.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Jinxed.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Jinxed
+MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.Position = UDim2.new(0.127878785, 0, 0.406318069, 0)
+MainFrame.Size = UDim2.new(0, 500, 0, 230)
+MainFrame.ZIndex = 2
+
+UICorner.Parent = MainFrame
+
+DropShadow.Name = "DropShadow"
+DropShadow.Parent = MainFrame
+DropShadow.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DropShadow.BorderSizePixel = 0
+DropShadow.Position = UDim2.new(0, 3, 0, 3)
+DropShadow.Size = UDim2.new(1, 0, 1, 0)
+
+UICorner_2.Parent = DropShadow
+
+CmdFrame.Name = "CmdFrame"
+CmdFrame.Parent = MainFrame
+CmdFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CmdFrame.Position = UDim2.new(0.75999999, 0, 0, 0)
+CmdFrame.Size = UDim2.new(0, 120, 0, 230)
+CmdFrame.ZIndex = 2
+
+UICorner_3.Parent = CmdFrame
+
+Rect.Name = "Rect"
+Rect.Parent = CmdFrame
+Rect.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Rect.BorderSizePixel = 0
+Rect.Size = UDim2.new(0, 5, 0, 230)
+Rect.ZIndex = 2
+
+Line.Name = "Line"
+Line.Parent = CmdFrame
+Line.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(0, 0, 0.149952114, 0)
+Line.Size = UDim2.new(0, 120, 0, 2)
+Line.ZIndex = 2
+
+Sort.Name = "Sort"
+Sort.Parent = CmdFrame
+Sort.BackgroundTransparency = 1.000
+Sort.Position = UDim2.new(0.0419999994, 0, 0.0195000004, 0)
+Sort.Size = UDim2.new(0, 25, 0, 25)
+Sort.ZIndex = 2
+Sort.Image = "rbxassetid://3944704135"
+Sort.ScaleType = Enum.ScaleType.Fit
+
+Title.Name = "Title"
+Title.Parent = CmdFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.166666672, 0, 0, 0)
+Title.Size = UDim2.new(0, 100, 0, 39)
+Title.ZIndex = 2
+Title.Font = Enum.Font.Gotham
+Title.Text = "Commands"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 13.000
+
+Cmds.Name = "Cmds"
+Cmds.Parent = CmdFrame
+Cmds.Active = true
+Cmds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cmds.BackgroundTransparency = 1.000
+Cmds.BorderSizePixel = 0
+Cmds.Position = UDim2.new(0.0420000702, 0, 0.169565216, 0)
+Cmds.Size = UDim2.new(0, 109, 0, 188)
+Cmds.ZIndex = 2
+Cmds.ScrollBarThickness = 6
+
+UIListLayout.Parent = Cmds
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+Cmd.Name = "Cmd"
+Cmd.Parent = UIListLayout
+Cmd.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cmd.BackgroundTransparency = 1.000
+Cmd.Size = UDim2.new(0, 95, 0, 20)
+Cmd.ZIndex = 2
+Cmd.Font = Enum.Font.Gotham
+Cmd.Text = "; Command"
+Cmd.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cmd.TextSize = 13.000
+
+SearchBoxFrame.Name = "SearchBoxFrame"
+SearchBoxFrame.Parent = MainFrame
+SearchBoxFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SearchBoxFrame.Position = UDim2.new(0.488000005, 0, 0.0412390679, 0)
+SearchBoxFrame.Size = UDim2.new(0, 110, 0, 28)
+SearchBoxFrame.ZIndex = 2
+
+UICorner_4.CornerRadius = UDim.new(0, 25)
+UICorner_4.Parent = SearchBoxFrame
+
+SearchBox.Name = "SearchBox"
+SearchBox.Parent = SearchBoxFrame
+SearchBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SearchBox.BackgroundTransparency = 1.000
+SearchBox.Position = UDim2.new(0.110909201, 0, 0.285714298, 0)
+SearchBox.Size = UDim2.new(0, 90, 0, 12)
+SearchBox.ZIndex = 2
+SearchBox.Font = Enum.Font.Gotham
+SearchBox.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+SearchBox.PlaceholderText = "; to type, enter to exe"
+SearchBox.Text = ""
+SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+SearchBox.TextScaled = true
+SearchBox.TextSize = 14.000
+SearchBox.TextWrapped = true
+
+Sectors.Name = "Sectors"
+Sectors.Parent = MainFrame
+Sectors.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sectors.BackgroundTransparency = 1.000
+Sectors.ClipsDescendants = true
+Sectors.LayoutOrder = 1
+Sectors.Position = UDim2.new(0, 0, 0.217391297, 0)
+Sectors.Size = UDim2.new(0, 380, 0, 180)
+Sectors.ZIndex = 2
+
+Home.Name = "Home"
+Home.Parent = Sectors
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.Size = UDim2.new(0, 380, 0, 180)
+Home.ZIndex = 2
+
+Title_2.Name = "Title"
+Title_2.Parent = Home
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0, 0, -0.00187552162, 0)
+Title_2.Size = UDim2.new(0, 120, 0, 25)
+Title_2.ZIndex = 2
+Title_2.Font = Enum.Font.SourceSansBold
+Title_2.Text = "Dashboard"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 20.000
+
+Tabs.Name = "Tabs"
+Tabs.Parent = Home
+Tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tabs.BackgroundTransparency = 1.000
+Tabs.Position = UDim2.new(0.0578947365, 0, 0.166666672, 0)
+Tabs.Size = UDim2.new(0, 200, 0, 25)
+Tabs.ZIndex = 2
+
+Main.Name = "Main"
+Main.Parent = Tabs
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Size = UDim2.new(0, 50, 0, 23)
+Main.ZIndex = 2
+Main.Font = Enum.Font.Gotham
+Main.Text = "Main"
+Main.TextColor3 = Color3.fromRGB(150, 150, 150)
+Main.TextSize = 14.000
+
+Slider.Name = "Slider"
+Slider.Parent = Tabs
+Slider.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+Slider.BorderSizePixel = 0
+Slider.Position = UDim2.new(0.0749999955, 0, 0.920000017, 0)
+Slider.Size = UDim2.new(0, 20, 0, 2)
+Slider.ZIndex = 2
+
+Streets.Name = "Streets"
+Streets.Parent = Tabs
+Streets.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Streets.BackgroundTransparency = 1.000
+Streets.Position = UDim2.new(0.25, 0, 0, 0)
+Streets.Size = UDim2.new(0, 50, 0, 23)
+Streets.ZIndex = 2
+Streets.Font = Enum.Font.Gotham
+Streets.Text = "Streets"
+Streets.TextColor3 = Color3.fromRGB(150, 150, 150)
+Streets.TextSize = 14.000
+
+Audio.Name = "Audio"
+Audio.Parent = Tabs
+Audio.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Audio.BackgroundTransparency = 1.000
+Audio.Position = UDim2.new(0.5, 0, 0, 0)
+Audio.Size = UDim2.new(0, 50, 0, 23)
+Audio.ZIndex = 2
+Audio.Font = Enum.Font.Gotham
+Audio.Text = "Audio"
+Audio.TextColor3 = Color3.fromRGB(150, 150, 150)
+Audio.TextSize = 14.000
+
+Misc.Name = "Misc"
+Misc.Parent = Tabs
+Misc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Misc.BackgroundTransparency = 1.000
+Misc.Position = UDim2.new(0.75, 0, 0, 0)
+Misc.Size = UDim2.new(0, 50, 0, 23)
+Misc.ZIndex = 2
+Misc.Font = Enum.Font.Gotham
+Misc.Text = "Misc"
+Misc.TextColor3 = Color3.fromRGB(150, 150, 150)
+Misc.TextSize = 14.000
+
+Pages.Name = "Pages"
+Pages.Parent = Home
+Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pages.BackgroundTransparency = 1.000
+Pages.Position = UDim2.new(0, 0, 0.332353055, 0)
+Pages.Size = UDim2.new(0, 380, 0, 120)
+Pages.ZIndex = 2
+
+Main_2.Name = "Main"
+Main_2.Parent = Pages
+Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_2.BackgroundTransparency = 1.000
+Main_2.LayoutOrder = 1
+Main_2.Size = UDim2.new(0, 380, 0, 120)
+Main_2.ZIndex = 2
+
+TargetBoxFrame.Name = "TargetBoxFrame"
+TargetBoxFrame.Parent = Main_2
+TargetBoxFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TargetBoxFrame.Position = UDim2.new(0.189473689, 0, 0.0162389111, 0)
+TargetBoxFrame.Size = UDim2.new(0, 281, 0, 28)
+TargetBoxFrame.ZIndex = 2
+
+UICorner_5.CornerRadius = UDim.new(0, 25)
+UICorner_5.Parent = TargetBoxFrame
+
+TargetBox.Name = "TargetBox"
+TargetBox.Parent = TargetBoxFrame
+TargetBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TargetBox.BackgroundTransparency = 1.000
+TargetBox.Position = UDim2.new(0.0582013652, 0, 0.285714298, 0)
+TargetBox.Size = UDim2.new(0, 245, 0, 12)
+TargetBox.ZIndex = 2
+TargetBox.Font = Enum.Font.Gotham
+TargetBox.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+TargetBox.PlaceholderText = "Target Name Here.."
+TargetBox.Text = ""
+TargetBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TargetBox.TextScaled = true
+TargetBox.TextSize = 14.000
+TargetBox.TextWrapped = true
+
+Check.Name = "Check"
+Check.Parent = Main_2
+Check.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Check.Position = UDim2.new(0.318909824, 0, 0.400000006, 0)
+Check.Size = UDim2.new(0, 87, 0, 23)
+Check.ZIndex = 2
+
+UICorner_6.CornerRadius = UDim.new(0, 20)
+UICorner_6.Parent = Check
+
+Btn.Name = "Btn"
+Btn.Parent = Check
+Btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn.BackgroundTransparency = 1.000
+Btn.Size = UDim2.new(0, 87, 0, 23)
+Btn.ZIndex = 2
+Btn.Font = Enum.Font.Gotham
+Btn.Text = "Check"
+Btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btn.TextSize = 12.000
+
+View.Name = "View"
+View.Parent = Main_2
+View.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+View.Position = UDim2.new(0.573256314, 0, 0.400000006, 0)
+View.Size = UDim2.new(0, 87, 0, 23)
+View.ZIndex = 2
+
+UICorner_7.CornerRadius = UDim.new(0, 20)
+UICorner_7.Parent = View
+
+Btn_2.Name = "Btn"
+Btn_2.Parent = View
+Btn_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_2.BackgroundTransparency = 1.000
+Btn_2.Size = UDim2.new(0, 87, 0, 23)
+Btn_2.ZIndex = 2
+Btn_2.Font = Enum.Font.Gotham
+Btn_2.Text = "View"
+Btn_2.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_2.TextSize = 12.000
+
+Attach.Name = "Attach"
+Attach.Parent = Main_2
+Attach.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Attach.Position = UDim2.new(0.699132264, 0, 0.663603187, 0)
+Attach.Size = UDim2.new(0, 87, 0, 23)
+Attach.ZIndex = 2
+
+UICorner_8.CornerRadius = UDim.new(0, 20)
+UICorner_8.Parent = Attach
+
+Btn_3.Name = "Btn"
+Btn_3.Parent = Attach
+Btn_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_3.BackgroundTransparency = 1.000
+Btn_3.Position = UDim2.new(0, 0, -0.0224450156, 0)
+Btn_3.Size = UDim2.new(0, 87, 0, 23)
+Btn_3.ZIndex = 2
+Btn_3.Font = Enum.Font.Gotham
+Btn_3.Text = "Attach"
+Btn_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btn_3.TextSize = 12.000
+
+VoidLoop.Name = "VoidLoop"
+VoidLoop.Parent = Main_2
+VoidLoop.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+VoidLoop.Position = UDim2.new(0.443820268, 0, 0.663603187, 0)
+VoidLoop.Size = UDim2.new(0, 87, 0, 23)
+VoidLoop.ZIndex = 2
+
+UICorner_9.CornerRadius = UDim.new(0, 20)
+UICorner_9.Parent = VoidLoop
+
+Btn_4.Name = "Btn"
+Btn_4.Parent = VoidLoop
+Btn_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_4.BackgroundTransparency = 1.000
+Btn_4.Position = UDim2.new(0, 0, -0.0224450156, 0)
+Btn_4.Size = UDim2.new(0, 87, 0, 23)
+Btn_4.ZIndex = 2
+Btn_4.Font = Enum.Font.Gotham
+Btn_4.Text = "Void-Loop"
+Btn_4.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_4.TextSize = 12.000
+
+FELoop.Name = "FELoop"
+FELoop.Parent = Main_2
+FELoop.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+FELoop.Position = UDim2.new(0.189473689, 0, 0.663603187, 0)
+FELoop.Size = UDim2.new(0, 87, 0, 23)
+FELoop.ZIndex = 2
+
+UICorner_10.CornerRadius = UDim.new(0, 20)
+UICorner_10.Parent = FELoop
+
+Btn_5.Name = "Btn"
+Btn_5.Parent = FELoop
+Btn_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_5.BackgroundTransparency = 1.000
+Btn_5.Position = UDim2.new(0, 0, -0.0224450156, 0)
+Btn_5.Size = UDim2.new(0, 87, 0, 23)
+Btn_5.ZIndex = 2
+Btn_5.Font = Enum.Font.Gotham
+Btn_5.Text = "FE-Loop"
+Btn_5.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_5.TextSize = 12.000
+
+AntiFe.Name = "AntiFe"
+AntiFe.Parent = Main_2
+AntiFe.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+AntiFe.Position = UDim2.new(0.0215414148, 0, 0.300000012, 0)
+AntiFe.Size = UDim2.new(0, 57, 0, 23)
+AntiFe.ZIndex = 2
+
+UICorner_11.CornerRadius = UDim.new(0, 20)
+UICorner_11.Parent = AntiFe
+
+Btn_6.Name = "Btn"
+Btn_6.Parent = AntiFe
+Btn_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_6.BackgroundTransparency = 1.000
+Btn_6.Size = UDim2.new(0, 57, 0, 23)
+Btn_6.ZIndex = 2
+Btn_6.Font = Enum.Font.Gotham
+Btn_6.Text = "AntiFe"
+Btn_6.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_6.TextSize = 10.000
+
+AntiVoid.Name = "AntiVoid"
+AntiVoid.Parent = Main_2
+AntiVoid.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+AntiVoid.Position = UDim2.new(0.0215414148, 0, 0.591666639, 0)
+AntiVoid.Size = UDim2.new(0, 57, 0, 23)
+AntiVoid.ZIndex = 2
+
+UICorner_12.CornerRadius = UDim.new(0, 20)
+UICorner_12.Parent = AntiVoid
+
+Btn_7.Name = "Btn"
+Btn_7.Parent = AntiVoid
+Btn_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_7.BackgroundTransparency = 1.000
+Btn_7.Size = UDim2.new(0, 57, 0, 23)
+Btn_7.ZIndex = 2
+Btn_7.Font = Enum.Font.Gotham
+Btn_7.Text = "AntiVoid"
+Btn_7.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_7.TextSize = 10.000
+
+UIPageLayout.Parent = Pages
+UIPageLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIPageLayout.EasingStyle = Enum.EasingStyle.Quint
+UIPageLayout.TweenTime = 0.500
+
+Streets_2.Name = "Streets"
+Streets_2.Parent = Pages
+Streets_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Streets_2.BackgroundTransparency = 1.000
+Streets_2.LayoutOrder = 2
+Streets_2.Size = UDim2.new(0, 380, 0, 120)
+Streets_2.ZIndex = 2
+
+BanBypass.Name = "BanBypass"
+BanBypass.Parent = Streets_2
+BanBypass.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BanBypass.Position = UDim2.new(0.124172971, 0, 0.100000024, 0)
+BanBypass.Size = UDim2.new(0, 87, 0, 23)
+BanBypass.ZIndex = 2
+
+UICorner_13.CornerRadius = UDim.new(0, 20)
+UICorner_13.Parent = BanBypass
+
+Btn_8.Name = "Btn"
+Btn_8.Parent = BanBypass
+Btn_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_8.BackgroundTransparency = 1.000
+Btn_8.Size = UDim2.new(0, 87, 0, 23)
+Btn_8.ZIndex = 2
+Btn_8.Font = Enum.Font.Gotham
+Btn_8.Text = "Ban-Bypass"
+Btn_8.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_8.TextSize = 12.000
+
+GodMode.Name = "GodMode"
+GodMode.Parent = Streets_2
+GodMode.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GodMode.Position = UDim2.new(0.402631611, 0, 0.105269849, 0)
+GodMode.Size = UDim2.new(0, 87, 0, 23)
+GodMode.ZIndex = 2
+
+UICorner_14.CornerRadius = UDim.new(0, 20)
+UICorner_14.Parent = GodMode
+
+Btn_9.Name = "Btn"
+Btn_9.Parent = GodMode
+Btn_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_9.BackgroundTransparency = 1.000
+Btn_9.Position = UDim2.new(0, 0, -0.0224450156, 0)
+Btn_9.Size = UDim2.new(0, 87, 0, 23)
+Btn_9.ZIndex = 2
+Btn_9.Font = Enum.Font.Gotham
+Btn_9.Text = "God-Mode"
+Btn_9.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_9.TextSize = 12.000
+
+AntiStomp.Name = "AntiStomp"
+AntiStomp.Parent = Streets_2
+AntiStomp.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+AntiStomp.Position = UDim2.new(0.124172971, 0, 0.39166671, 0)
+AntiStomp.Size = UDim2.new(0, 87, 0, 23)
+AntiStomp.ZIndex = 2
+
+UICorner_15.CornerRadius = UDim.new(0, 20)
+UICorner_15.Parent = AntiStomp
+
+Btn_10.Name = "Btn"
+Btn_10.Parent = AntiStomp
+Btn_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_10.BackgroundTransparency = 1.000
+Btn_10.Size = UDim2.new(0, 87, 0, 23)
+Btn_10.ZIndex = 2
+Btn_10.Font = Enum.Font.Gotham
+Btn_10.Text = "Anti-Stomp"
+Btn_10.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_10.TextSize = 12.000
+
+TPBypass.Name = "TPBypass"
+TPBypass.Parent = Streets_2
+TPBypass.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TPBypass.Position = UDim2.new(0.681578994, 0, 0.105269849, 0)
+TPBypass.Size = UDim2.new(0, 87, 0, 23)
+TPBypass.ZIndex = 2
+
+UICorner_16.CornerRadius = UDim.new(0, 20)
+UICorner_16.Parent = TPBypass
+
+Btn_11.Name = "Btn"
+Btn_11.Parent = TPBypass
+Btn_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_11.BackgroundTransparency = 1.000
+Btn_11.Position = UDim2.new(0, 0, -0.0224450156, 0)
+Btn_11.Size = UDim2.new(0, 87, 0, 23)
+Btn_11.ZIndex = 2
+Btn_11.Font = Enum.Font.Gotham
+Btn_11.Text = "TP-Bypass"
+Btn_11.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_11.TextSize = 12.000
+
+NoRope.Name = "NoRope"
+NoRope.Parent = Streets_2
+NoRope.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+NoRope.Position = UDim2.new(0.681578994, 0, 0.396936506, 0)
+NoRope.Size = UDim2.new(0, 87, 0, 23)
+NoRope.ZIndex = 2
+
+UICorner_17.CornerRadius = UDim.new(0, 20)
+UICorner_17.Parent = NoRope
+
+Btn_12.Name = "Btn"
+Btn_12.Parent = NoRope
+Btn_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_12.BackgroundTransparency = 1.000
+Btn_12.Position = UDim2.new(0, 0, -0.0224450156, 0)
+Btn_12.Size = UDim2.new(0, 87, 0, 23)
+Btn_12.ZIndex = 2
+Btn_12.Font = Enum.Font.Gotham
+Btn_12.Text = "No-Rope"
+Btn_12.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_12.TextSize = 12.000
+
+NoSlow.Name = "NoSlow"
+NoSlow.Parent = Streets_2
+NoSlow.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+NoSlow.Position = UDim2.new(0.402631611, 0, 0.396936506, 0)
+NoSlow.Size = UDim2.new(0, 87, 0, 23)
+NoSlow.ZIndex = 2
+
+UICorner_18.CornerRadius = UDim.new(0, 20)
+UICorner_18.Parent = NoSlow
+
+Btn_13.Name = "Btn"
+Btn_13.Parent = NoSlow
+Btn_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_13.BackgroundTransparency = 1.000
+Btn_13.Position = UDim2.new(0, 0, -0.0224450156, 0)
+Btn_13.Size = UDim2.new(0, 87, 0, 23)
+Btn_13.ZIndex = 2
+Btn_13.Font = Enum.Font.Gotham
+Btn_13.Text = "No-Slow"
+Btn_13.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_13.TextSize = 12.000
+
+Aimlock.Name = "Aimlock"
+Aimlock.Parent = Streets_2
+Aimlock.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Aimlock.Position = UDim2.new(0.042105265, 0, 0.662139893, 0)
+Aimlock.Size = UDim2.new(0, 87, 0, 15)
+Aimlock.ZIndex = 2
+
+UICorner_19.CornerRadius = UDim.new(0, 20)
+UICorner_19.Parent = Aimlock
+
+Btn_14.Name = "Btn"
+Btn_14.Parent = Aimlock
+Btn_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_14.BackgroundTransparency = 1.000
+Btn_14.Position = UDim2.new(0, 0, -0.022709148, 0)
+Btn_14.Size = UDim2.new(0, 87, 0, 15)
+Btn_14.ZIndex = 2
+Btn_14.Font = Enum.Font.Gotham
+Btn_14.Text = "Aimlock"
+Btn_14.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_14.TextSize = 12.000
+
+Camlock.Name = "Camlock"
+Camlock.Parent = Streets_2
+Camlock.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Camlock.Position = UDim2.new(0.042105265, 0, 0.84547323, 0)
+Camlock.Size = UDim2.new(0, 87, 0, 15)
+Camlock.ZIndex = 2
+
+UICorner_20.CornerRadius = UDim.new(0, 20)
+UICorner_20.Parent = Camlock
+
+Btn_15.Name = "Btn"
+Btn_15.Parent = Camlock
+Btn_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_15.BackgroundTransparency = 1.000
+Btn_15.Position = UDim2.new(0, 0, -0.022709148, 0)
+Btn_15.Size = UDim2.new(0, 87, 0, 15)
+Btn_15.ZIndex = 2
+Btn_15.Font = Enum.Font.Gotham
+Btn_15.Text = "Camlock"
+Btn_15.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_15.TextSize = 12.000
+
+Nearest.Name = "Nearest"
+Nearest.Parent = Streets_2
+Nearest.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Nearest.Position = UDim2.new(0.292105258, 0, 0.662139893, 0)
+Nearest.Size = UDim2.new(0, 87, 0, 15)
+Nearest.ZIndex = 2
+
+UICorner_21.CornerRadius = UDim.new(0, 20)
+UICorner_21.Parent = Nearest
+
+Btn_16.Name = "Btn"
+Btn_16.Parent = Nearest
+Btn_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_16.BackgroundTransparency = 1.000
+Btn_16.Position = UDim2.new(0, 0, -0.022709148, 0)
+Btn_16.Size = UDim2.new(0, 87, 0, 15)
+Btn_16.ZIndex = 2
+Btn_16.Font = Enum.Font.Gotham
+Btn_16.Text = "Nearest"
+Btn_16.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_16.TextSize = 12.000
+
+Capture.Name = "Capture"
+Capture.Parent = Streets_2
+Capture.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Capture.Position = UDim2.new(0.292105258, 0, 0.84547323, 0)
+Capture.Size = UDim2.new(0, 87, 0, 15)
+Capture.ZIndex = 2
+
+UICorner_22.CornerRadius = UDim.new(0, 20)
+UICorner_22.Parent = Capture
+
+Btn_17.Name = "Btn"
+Btn_17.Parent = Capture
+Btn_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_17.BackgroundTransparency = 1.000
+Btn_17.Position = UDim2.new(0, 0, -0.022709148, 0)
+Btn_17.Size = UDim2.new(0, 87, 0, 15)
+Btn_17.ZIndex = 2
+Btn_17.Font = Enum.Font.Gotham
+Btn_17.Text = "Capture"
+Btn_17.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_17.TextSize = 12.000
+
+TargetBoxFrame_2.Name = "TargetBoxFrame"
+TargetBoxFrame_2.Parent = Streets_2
+TargetBoxFrame_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TargetBoxFrame_2.Position = UDim2.new(0.568000019, 0, 0.689999998, 0)
+TargetBoxFrame_2.Size = UDim2.new(0, 146, 0, 27)
+TargetBoxFrame_2.ZIndex = 2
+
+UICorner_23.CornerRadius = UDim.new(0, 25)
+UICorner_23.Parent = TargetBoxFrame_2
+
+TargetBox_2.Name = "TargetBox"
+TargetBox_2.Parent = TargetBoxFrame_2
+TargetBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TargetBox_2.BackgroundTransparency = 1.000
+TargetBox_2.Position = UDim2.new(0.0582014099, 0, 0.289060235, 0)
+TargetBox_2.Size = UDim2.new(0, 127, 0, 11)
+TargetBox_2.ZIndex = 2
+TargetBox_2.Font = Enum.Font.Gotham
+TargetBox_2.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+TargetBox_2.PlaceholderText = "Target Name Here.."
+TargetBox_2.Text = ""
+TargetBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TargetBox_2.TextScaled = true
+TargetBox_2.TextSize = 14.000
+TargetBox_2.TextWrapped = true
+
+Audio_2.Name = "Audio"
+Audio_2.Parent = Pages
+Audio_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Audio_2.BackgroundTransparency = 1.000
+Audio_2.LayoutOrder = 3
+Audio_2.Size = UDim2.new(0, 380, 0, 120)
+Audio_2.ZIndex = 2
+
+ClientSided.Name = "ClientSided"
+ClientSided.Parent = Audio_2
+ClientSided.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ClientSided.Position = UDim2.new(0.150488764, 0, 0.0594828725, 0)
+ClientSided.Size = UDim2.new(0, 88, 0, 15)
+ClientSided.ZIndex = 2
+
+UICorner_24.CornerRadius = UDim.new(0, 20)
+UICorner_24.Parent = ClientSided
+
+Btn_18.Name = "Btn"
+Btn_18.Parent = ClientSided
+Btn_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_18.BackgroundTransparency = 1.000
+Btn_18.Size = UDim2.new(0, 88, 0, 15)
+Btn_18.ZIndex = 2
+Btn_18.Font = Enum.Font.Gotham
+Btn_18.Text = "Client-Sided"
+Btn_18.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_18.TextSize = 10.000
+
+Play.Name = "Play"
+Play.Parent = Audio_2
+Play.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Play.Position = UDim2.new(0.105751917, 0, 0.650000036, 0)
+Play.Size = UDim2.new(0, 72, 0, 23)
+Play.ZIndex = 2
+
+UICorner_25.CornerRadius = UDim.new(0, 20)
+UICorner_25.Parent = Play
+
+Btn_19.Name = "Btn"
+Btn_19.Parent = Play
+Btn_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_19.BackgroundTransparency = 1.000
+Btn_19.Size = UDim2.new(0, 72, 0, 23)
+Btn_19.ZIndex = 2
+Btn_19.Font = Enum.Font.Gotham
+Btn_19.Text = "Play"
+Btn_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btn_19.TextSize = 12.000
+
+AudioBoxFrame.Name = "AudioBoxFrame"
+AudioBoxFrame.Parent = Audio_2
+AudioBoxFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+AudioBoxFrame.Position = UDim2.new(0.107894734, 0, 0.366238922, 0)
+AudioBoxFrame.Size = UDim2.new(0, 235, 0, 28)
+AudioBoxFrame.ZIndex = 2
+
+UICorner_26.CornerRadius = UDim.new(0, 25)
+UICorner_26.Parent = AudioBoxFrame
+
+AudioBox.Name = "AudioBox"
+AudioBox.Parent = AudioBoxFrame
+AudioBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AudioBox.BackgroundTransparency = 1.000
+AudioBox.Position = UDim2.new(0.0582474098, 0, 0.285714298, 0)
+AudioBox.Size = UDim2.new(0, 205, 0, 12)
+AudioBox.ZIndex = 2
+AudioBox.Font = Enum.Font.Gotham
+AudioBox.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+AudioBox.PlaceholderText = "Audio ID Here.."
+AudioBox.Text = ""
+AudioBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+AudioBox.TextScaled = true
+AudioBox.TextSize = 14.000
+AudioBox.TextWrapped = true
+
+Stop.Name = "Stop"
+Stop.Parent = Audio_2
+Stop.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Stop.Position = UDim2.new(0.319376409, 0, 0.641666651, 0)
+Stop.Size = UDim2.new(0, 72, 0, 23)
+Stop.ZIndex = 2
+
+UICorner_27.CornerRadius = UDim.new(0, 20)
+UICorner_27.Parent = Stop
+
+Btn_20.Name = "Btn"
+Btn_20.Parent = Stop
+Btn_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_20.BackgroundTransparency = 1.000
+Btn_20.Size = UDim2.new(0, 72, 0, 23)
+Btn_20.ZIndex = 2
+Btn_20.Font = Enum.Font.Gotham
+Btn_20.Text = "Stop"
+Btn_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btn_20.TextSize = 12.000
+
+MassPlay.Name = "MassPlay"
+MassPlay.Parent = Audio_2
+MassPlay.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MassPlay.Position = UDim2.new(0.535203099, 0, 0.650000036, 0)
+MassPlay.Size = UDim2.new(0, 72, 0, 23)
+MassPlay.ZIndex = 2
+
+UICorner_28.CornerRadius = UDim.new(0, 20)
+UICorner_28.Parent = MassPlay
+
+Btn_21.Name = "Btn"
+Btn_21.Parent = MassPlay
+Btn_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_21.BackgroundTransparency = 1.000
+Btn_21.Size = UDim2.new(0, 72, 0, 23)
+Btn_21.ZIndex = 2
+Btn_21.Font = Enum.Font.Gotham
+Btn_21.Text = "MassPlay"
+Btn_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btn_21.TextSize = 12.000
+
+TimePosBoxFrame.Name = "TimePosBoxFrame"
+TimePosBoxFrame.Parent = Audio_2
+TimePosBoxFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TimePosBoxFrame.Position = UDim2.new(0.744736791, 0, 0.366238922, 0)
+TimePosBoxFrame.Size = UDim2.new(0, 70, 0, 28)
+TimePosBoxFrame.ZIndex = 2
+
+UICorner_29.CornerRadius = UDim.new(0, 25)
+UICorner_29.Parent = TimePosBoxFrame
+
+TimePosBox.Name = "TimePosBox"
+TimePosBox.Parent = TimePosBoxFrame
+TimePosBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TimePosBox.BackgroundTransparency = 1.000
+TimePosBox.Position = UDim2.new(0.18727155, 0, 0.285714298, 0)
+TimePosBox.Size = UDim2.new(0, 42, 0, 12)
+TimePosBox.ZIndex = 2
+TimePosBox.Font = Enum.Font.Gotham
+TimePosBox.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+TimePosBox.PlaceholderText = "TImePos"
+TimePosBox.Text = ""
+TimePosBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimePosBox.TextScaled = true
+TimePosBox.TextSize = 14.000
+TimePosBox.TextWrapped = true
+
+Sync.Name = "Sync"
+Sync.Parent = Audio_2
+Sync.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sync.Position = UDim2.new(0.744736791, 0, 0.641666651, 0)
+Sync.Size = UDim2.new(0, 69, 0, 23)
+Sync.ZIndex = 2
+
+UICorner_30.CornerRadius = UDim.new(0, 20)
+UICorner_30.Parent = Sync
+
+Btn_22.Name = "Btn"
+Btn_22.Parent = Sync
+Btn_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_22.BackgroundTransparency = 1.000
+Btn_22.Size = UDim2.new(0, 69, 0, 23)
+Btn_22.ZIndex = 2
+Btn_22.Font = Enum.Font.Gotham
+Btn_22.Text = "Sync"
+Btn_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btn_22.TextSize = 12.000
+
+Regular.Name = "Regular"
+Regular.Parent = Audio_2
+Regular.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Regular.Position = UDim2.new(0.400488794, 0, 0.0666666701, 0)
+Regular.Size = UDim2.new(0, 88, 0, 15)
+Regular.ZIndex = 2
+
+UICorner_31.CornerRadius = UDim.new(0, 20)
+UICorner_31.Parent = Regular
+
+Btn_23.Name = "Btn"
+Btn_23.Parent = Regular
+Btn_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_23.BackgroundTransparency = 1.000
+Btn_23.Size = UDim2.new(0, 88, 0, 15)
+Btn_23.ZIndex = 2
+Btn_23.Font = Enum.Font.Gotham
+Btn_23.Text = "Regular"
+Btn_23.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_23.TextSize = 10.000
+
+Streets_3.Name = "Streets"
+Streets_3.Parent = Audio_2
+Streets_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Streets_3.Position = UDim2.new(0.653120399, 0, 0.0666666701, 0)
+Streets_3.Size = UDim2.new(0, 88, 0, 15)
+Streets_3.ZIndex = 2
+
+UICorner_32.CornerRadius = UDim.new(0, 20)
+UICorner_32.Parent = Streets_3
+
+Btn_24.Name = "Btn"
+Btn_24.Parent = Streets_3
+Btn_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Btn_24.BackgroundTransparency = 1.000
+Btn_24.Size = UDim2.new(0, 88, 0, 15)
+Btn_24.ZIndex = 2
+Btn_24.Font = Enum.Font.Gotham
+Btn_24.Text = "Streets"
+Btn_24.TextColor3 = Color3.fromRGB(170, 0, 0)
+Btn_24.TextSize = 10.000
+
+Misc_2.Name = "Misc"
+Misc_2.Parent = Pages
+Misc_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Misc_2.BackgroundTransparency = 1.000
+Misc_2.LayoutOrder = 4
+Misc_2.Size = UDim2.new(0, 380, 0, 120)
+Misc_2.ZIndex = 2
+
+Notification.Name = "Notification"
+Notification.Parent = MainFrame
+Notification.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Notification.BorderSizePixel = 0
+Notification.Size = UDim2.new(0, 500, 0, 230)
+
+UICorner_33.Parent = Notification
+
+Text.Name = "Text"
+Text.Parent = Notification
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.Position = UDim2.new(0, 0, 0.858504057, 0)
+Text.Size = UDim2.new(1, 0, 0.141495675, 0)
+Text.Font = Enum.Font.Gotham
+Text.Text = "Notification: "
+Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text.TextSize = 14.000
+
+DropShadow_2.Name = "DropShadow"
+DropShadow_2.Parent = Notification
+DropShadow_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+DropShadow_2.BorderSizePixel = 0
+DropShadow_2.Position = UDim2.new(0, 3, 0, 3)
+DropShadow_2.Size = UDim2.new(1, 0, 1, 0)
+DropShadow_2.ZIndex = 0
+
+UICorner_34.Parent = DropShadow_2
+
+Title_3.Name = "Title"
+Title_3.Parent = MainFrame
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Position = UDim2.new(0.118000001, 0, 0, 0)
+Title_3.Size = UDim2.new(0, 109, 0, 49)
+Title_3.ZIndex = 2
+Title_3.Font = Enum.Font.Gotham
+Title_3.Text = "Jinxed v1.0"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextSize = 16.000
+
+Visibility.Name = "Visibility"
+Visibility.Parent = MainFrame
+Visibility.BackgroundTransparency = 1.000
+Visibility.Position = UDim2.new(0.0179999992, 0, 0.0390000008, 0)
+Visibility.Size = UDim2.new(0, 50, 0, 30)
+Visibility.ZIndex = 2
+Visibility.Image = "rbxassetid://3610254229"
+Visibility.ScaleType = Enum.ScaleType.Fit
+
+-- Scripts:
+
+local function QRCCBV_fake_script() -- Jinxed.LocalScript 
+	local script = Instance.new('LocalScript', Jinxed)
+
+	local Gui = script.Parent
+	local MainFrame = Gui:WaitForChild("MainFrame")
+	local CmdFrame = MainFrame:WaitForChild("CmdFrame")
+	local Cmds = CmdFrame:WaitForChild("Cmds")
+	local CmdList = Cmds:WaitForChild("UIListLayout")
+	local Cmd = CmdList:WaitForChild("Cmd")
+	local SearchBoxFrame = MainFrame:WaitForChild("SearchBoxFrame")
+	local Sectors = MainFrame:WaitForChild("Sectors")
+	local Home = Sectors:WaitForChild("Home")
+	local PagesFrame,TabsFrame = Home:WaitForChild("Pages"),Home:WaitForChild("Tabs")
+	local PageLayout = PagesFrame:WaitForChild("UIPageLayout")
+	local Notification = MainFrame:WaitForChild("Notification")
+	local SearchBox = SearchBoxFrame:WaitForChild("SearchBox")
+	
+	local Pages,Tabs = {
+		["Main"] = PagesFrame:WaitForChild("Main");
+		["Streets"] = PagesFrame:WaitForChild("Streets");
+		["Audio"] = PagesFrame:WaitForChild("Audio");
+		["Misc"] = PagesFrame:WaitForChild("Misc");
+	},{
+		["Main"] = TabsFrame:WaitForChild("Main");
+		["Streets"] = TabsFrame:WaitForChild("Streets");
+		["Audio"] = TabsFrame:WaitForChild("Audio");
+		["Misc"] = TabsFrame:WaitForChild("Misc");
+		["Slider"] = TabsFrame:WaitForChild("Slider");
+	}
+	
+	local MainTable,StreetsTable,AudioTable = {
+		["Check"] = Pages["Main"]:WaitForChild("Check");
+		["View"] = Pages["Main"]:WaitForChild("View");
+		["FELoop"] = Pages["Main"]:WaitForChild("FELoop");
+		["VoidLoop"] = Pages["Main"]:WaitForChild("VoidLoop");
+		["Attach"] = Pages["Main"]:WaitForChild("Attach");
+		["AntiFe"] = Pages["Main"]:WaitForChild("AntiFe");
+		["AntiVoid"] = Pages["Main"]:WaitForChild("AntiVoid");
+		["TargetBox"] = Pages["Main"]:WaitForChild("TargetBoxFrame").TargetBox;
+	},{
+		["Nearest"] = Pages["Streets"]:WaitForChild("Nearest");
+		["AntiStomp"] = Pages["Streets"]:WaitForChild("AntiStomp");
+		["BanBypass"] = Pages["Streets"]:WaitForChild("BanBypass");
+		["Capture"] = Pages["Streets"]:WaitForChild("Capture");
+		["GodMode"] = Pages["Streets"]:WaitForChild("GodMode");
+		["NoSlow"] = Pages["Streets"]:WaitForChild("NoSlow");
+		["TPBypass"] = Pages["Streets"]:WaitForChild("TPBypass");
+		["NoRope"] = Pages["Streets"]:WaitForChild("NoRope");
+		["Aimlock"] = Pages["Streets"]:WaitForChild("Aimlock");
+		["Camlock"] = Pages["Streets"]:WaitForChild("Camlock");
+		["TargetBox"] = Pages["Streets"]:WaitForChild("TargetBoxFrame").TargetBox;
+	},{
+		["AudioBoxFrame"] = Pages["Audio"]:WaitForChild("AudioBoxFrame");
+		["ClientSided"] = Pages["Audio"]:WaitForChild("ClientSided");
+		["MassPlay"] = Pages["Audio"]:WaitForChild("MassPlay");
+		["Play"] = Pages["Audio"]:WaitForChild("Play");
+		["Regular"] = Pages["Audio"]:WaitForChild("Regular");
+		["Stop"] = Pages["Audio"]:WaitForChild("Stop");
+		["Streets"] = Pages["Audio"]:WaitForChild("Streets");
+		["Sync"] = Pages["Audio"]:WaitForChild("Sync");
+		["TimePosBoxFrame"] = Pages["Audio"]:WaitForChild("TimePosBoxFrame");
+	}
+	
+	local Services = {
+		["P"] = game:GetService("Players");
+		["W"] = game:GetService("Workspace");
+		["RS"] = game:GetService("RunService");
+		["TS"] = game:GetService("TweenService");
+		["UIS"] = game:GetService("UserInputService");
+	}
+	local LP = Services["P"].LocalPlayer
+	local Cam,Mouse = Services["W"].CurrentCamera,LP:GetMouse()
+	local SPI = 1
+	
+	local function Tween(Btn,Time,Style,Direction,Table)
+		coroutine.wrap(function() 
+			Services["TS"]:Create(Btn,TweenInfo.new(Time,Enum.EasingStyle[Style],Enum.EasingDirection[Direction]),Table):Play()
+		end)()
+	end
+	
+	local function FindPlr(Str)
+		for i,v in pairs(Services["P"]:GetPlayers()) do
+			if Str:lower() == (v.Name:lower()):sub(1,#Str) then return v end
+		end
+	end
+	
+	local function Notify(Text,Dur)
+		coroutine.wrap(function()
+			Notification.Text.Text = "Notification: "..Text
+			Notification:TweenPosition(UDim2.new(0,0,0.15,0),Enum.EasingDirection.Out,Enum.EasingStyle.Quint,.5,true)
+			wait(.5)
+			wait(Dur)
+			Notification:TweenPosition(UDim2.new(0,0,0,0),Enum.EasingDirection.Out,Enum.EasingStyle.Quint,.5,true)
+		end)()
+	end
+	
+	local Commands = {
+		"; feloop",
+		"; voidloop",
+		"; unloop",
+		"; antife",
+		"; antivoid",
+		"; fly",
+		"; flyspeed",
+		"; unfly",
+		"; unanti",
+		"; check",
+		"; view",
+		"; unview"
+	}
+	
+	local Flying = false
+	local AntiVoiding = false
+	local AntiFeing = false
+	local VoidLooping = false
+	local FELooping = false
+	local Viewing = false
+	
+	local function onCommand(Enter)
+		if not Enter then SearchBox.Text = "" return end
+		local Text = SearchBox.Text
+		local Low = string.lower(Text)
+		local Split = string.split(Low, " ")
+		SearchBox.Text = ""
+		
+		if Low == "fly" then
+			Flying = true
+			Notify("Flying: true",2)
+		elseif Low == "unfly" then
+			Flying = false
+			Notify("Flying: false",2)
+		elseif Low == "antife" then
+			for i,v in pairs(LP.PlayerGui:GetChildren()) do
+				if v:IsA("LocalScript") then v.Disabled = true end
+			end
+			AntiFeing = true
+			Notify("AntiFe: "..tostring(AntiFeing),3)
+			Tween(MainTable["AntiFe"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif Low == "antivoid" then
+			AntiVoiding = true
+			Notify("AntiVoid: "..tostring(AntiVoiding),3)
+			Tween(MainTable["AntiVoid"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			local Saved = {}
+			local AntiVC,AntiVP;
+			Saved = LP.Backpack:GetChildren()
+			AntiVC = LP.Character.ChildAdded:Connect(function(x)
+				if not AntiVoiding then AntiVC:Disconnect();Saved = {}; return end
+				if x:IsA("Tool") and not table.find(Saved,x) then
+					Services["RS"].Stepped:Wait()
+					x:Destroy()
+					Services["RS"].Stepped:Wait()
+					LP.Character:WaitForChild("Humanoid"):UnequipTools()
+				end
+			end)
+			AntiVP = LP.Backpack.ChildAdded:Connect(function(x)
+				if not AntiVoiding then AntiVC:Disconnect();Saved = {}; return end
+				if x:IsA("Tool") and not table.find(Saved,x) then
+					Services["RS"].Stepped:Wait()
+					x:Destroy()
+				end
+			end)
+		elseif Low == "unloop" then
+			FELooping = false
+			VoidLooping = false
+			Tween(MainTable["VoidLoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			Tween(MainTable["FELoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			Notify("FELooping + VoidLooping: false",2)
+		elseif Low == "unanti" then
+			AntiVoiding = false
+			AntiFeing = false
+			Tween(MainTable["AntiVoid"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			Tween(MainTable["AntiFe"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			LP.Character:WaitForChild("Humanoid").Sit = false
+			LP.Character:WaitForChild("Humanoid").Jump = true
+			Notify("AntiVoid + AntiFe: false",2)
+			for i,v in pairs(LP.PlayerGui:GetChildren()) do
+				if v:IsA("LocalScript") then v.Disabled = false end
+			end
+		elseif Low == "unview" then
+			Cam.CameraSubject = LP.Character.Humanoid
+			Notify("Unviewing",2)
+		end
+		
+		if Split[1] == "feloop" then
+			local Plr = FindPlr(Split[2])
+			if not Plr then Notify("Player Not Found",1) return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) return end
+			FELooping = true
+			Notify("FELooping: "..Plr.Name,2)
+			Tween(MainTable["FELoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			coroutine.wrap(function() 
+				while Services["RS"].Stepped:Wait() do
+					if not Plr or not FELooping then break end
+					local Char,Pack = LP.Character or LP.CharacterAdded:Wait(),LP.Backpack
+					local HRP,Hum = Char:WaitForChild("HumanoidRootPart"),Char:WaitForChild("Humanoid")
+					local CL = Hum:Clone();Hum:Destroy();CL.Parent = Char;CL:ChangeState(15)
+					for i,v in pairs(Pack:GetChildren()) do
+						if v:IsA("Tool") then v.Parent = Char end
+					end
+					LP.CharacterAdded:Wait()
+				end
+			end)()
+			coroutine.wrap(function() 
+				while Services["RS"].Stepped:Wait() do
+					if not Plr or not FELooping then break end
+					local Char,PlrChar = LP.Character or LP.CharacterAdded:Wait(),Plr.Character or Plr.CharacterAdded:Wait()
+					local HRP,PlrHRP = Char:WaitForChild("HumanoidRootPart"),PlrChar:WaitForChild("HumanoidRootPart")
+					PlrHRP.CFrame = HRP.CFrame
+					HRP.CFrame = PlrHRP.CFrame
+				end
+			end)()
+		elseif Split[1] == "voidloop" then
+			local Plr = FindPlr(Split[2])
+			if not Plr then Notify("Player Not Found",1) VoidLooping = false return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) VoidLooping = false return end
+			VoidLooping = true
+			Notify("VoidLooping: true",2)
+			Tween(MainTable["VoidLoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			coroutine.wrap(function()
+				local SavedPos = LP.Character.HumanoidRootPart.CFrame
+				while Services["RS"].Stepped:Wait() do
+					if not Plr or not VoidLooping then break end
+					local Char,Pack = LP.Character or LP.CharacterAdded:Wait(),LP.Backpack
+					local HRP,Hum = Char:WaitForChild("HumanoidRootPart"),Char:WaitForChild("Humanoid")
+					local Tool = Pack:FindFirstChildOfClass("Tool")
+					local Stam = Char:FindFirstChild("Stamina")
+					if Stam then Stam:Destroy() end
+					local Equipped = false
+					workspace.FallenPartsDestroyHeight = 0/1/0
+					local CL = Hum:Clone()
+					Hum:Destroy()
+					CL.Parent = Char
+					Tool.Parent = Char
+					Tool.Handle.Massless = true
+					Tool.Parent = workspace
+					Tool.Grip = CFrame.new(0,-10000,0)
+					local BF,BT = Instance.new("BodyForce",HRP),Instance.new("BodyThrust",HRP)
+					BF.Force = Vector3.new(0,math.random(-9e9,-9e8),0)
+					BT.Force = Vector3.new(0,math.random(-9e9,-9e8),0)
+					Tool.AncestryChanged:Connect(function() 
+						Equipped = true
+						BF.Force = Vector3.new(math.huge,math.huge,math.huge)
+						BT.Force = Vector3.new(math.huge,math.huge,math.huge)
+					end)
+					coroutine.wrap(function()
+						local TargRoot;
+						while Services["RS"].Stepped:Wait() do
+							TargRoot = Plr.Character:FindFirstChild("HumanoidRootPart") or Plr.Character:FindFirstChild("UpperTorso") or Plr.Character:FindFirstChild("Torso")
+							CL.Jump = true
+							TargRoot.CFrame = Tool.Handle.CFrame
+							if Equipped or not LP.Character or not Plr.Character or not Tool or not TargRoot then break end
+						end
+					end)()
+					LP.CharacterAdded:Wait()
+					LP.Character:WaitForChild("HumanoidRootPart").CFrame = SavedPos
+					local FF = LP.Character:WaitForChild("ForceField")
+					FF:Destroy()
+				end	
+			end)()
+		elseif Split[1] == "attach" then
+			local Plr = FindPlr(Split[2])
+			if not Plr then Notify("Player Not Found",1) return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) return end
+			local PlrHRP = PlrChar:WaitForChild("HumanoidRootPart")
+			local Char,Pack = LP.Character,LP.Backpack
+			local HRP,Hum = Char.HumanoidRootPart,Char.Humanoid
+			Hum:Destroy();Hum:Clone().Parent = Char
+			for i,v in pairs(Pack:GetChildren()) do
+				if v:IsA("Tool") then v.Parent = Char end
+			end
+			Notify("Attaching: "..Plr.Name,2)
+			for i = 1,100 do
+				local T = Char:FindFirstChildOfClass("Tool")
+				PlrHRP.CFrame = T.Handle.CFrame
+			end
+		elseif Split[1] == "view" then
+			local Plr = FindPlr(Split[2])
+			if not Plr then Notify("Player Not Found",1) Viewing = false return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) Viewing = false return end
+			local PlrHum = PlrChar:FindFirstChildWhichIsA("Humanoid")
+			Cam.CameraSubject = PlrHum
+			Notify("Viewing: "..Plr.Name,2)
+		elseif Split[1] == "check" then
+			local Plr = FindPlr(Split[2])
+			if not Plr then Notify("Player Not Found",1) return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) return end
+			local PlrHum = PlrChar:FindFirstChildWhichIsA("Humanoid")
+			Notify(Plr.Name.." | ".."HP: "..tostring(math.floor(PlrHum.Health + 0.5)),5)
+		elseif Split[1] == "flyspeed" then
+			SPI = tonumber(Split[2])
+			Notify("FlySpeed: "..tostring(SPI),2)
+		end
+	end
+	
+	for i,v in pairs(Commands) do
+		local CL = Cmd:Clone()
+		CL.Text = Commands[i]
+		CL.Parent = Cmds
+		wait()
+	end
+	
+	for i,v in pairs(MainFrame:GetDescendants()) do
+		if v:IsA("TextButton") then
+			v.MouseButton1Down:Connect(function()
+				Tween(v.Parent,.1,"Quad","Out",{BackgroundColor3 = Color3.fromRGB(20,20,20)})
+				wait(.1)
+				Tween(v.Parent,.3,"Quad","Out",{BackgroundColor3 = Color3.fromRGB(40,40,40)})
+			end)
+		end
+	end
+	
+	local function onMainTarget()
+		if MainTable["TargetBox"].Text == "" or MainTable["TargetBox"].Text == " " then return end
+		local Plr = FindPlr(MainTable["TargetBox"].Text)
+		if Plr then
+			MainTable["TargetBox"].Text = tostring(Plr)
+		else
+			MainTable["TargetBox"].Text = "Player Not Found"
+		end
+	end
+	
+	local function onStreetsTarget()
+		if StreetsTable["TargetBox"].Text == "" or StreetsTable["TargetBox"].Text == " " then return end
+		local Plr = FindPlr(StreetsTable["TargetBox"].Text)
+		if Plr then
+			StreetsTable["TargetBox"].Text = tostring(Plr)
+		else
+			StreetsTable["TargetBox"].Text = "Player Not Found"
+		end
+	end
+	
+	local function onCheck()
+		local Plr = FindPlr(MainTable["TargetBox"].Text)
+		if not Plr then Notify("Player Not Found",1) return end
+		local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+		if not PlrChar then Notify("Player has no character (or killed)",1) return end
+		local PlrHum = PlrChar:FindFirstChildWhichIsA("Humanoid")
+		Notify(Plr.Name.." | ".."HP: "..tostring(math.floor(PlrHum.Health + 0.5)),5)
+	end
+	
+	local function onView()
+		Viewing = not Viewing
+		if Viewing == true then
+			local Plr = FindPlr(MainTable["TargetBox"].Text)
+			if not Plr then Notify("Player Not Found",1) Viewing = false return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) Viewing = false return end
+			local PlrHum = PlrChar:FindFirstChildWhichIsA("Humanoid")
+			Cam.CameraSubject = PlrHum
+			Notify("Viewing: "..Plr.Name,2)
+			Tween(MainTable["View"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif Viewing == false then
+			Cam.CameraSubject = LP.Character.Humanoid
+			Notify("Unviewing",2)
+			Tween(MainTable["View"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onFELoop()
+		FELooping = not FELooping
+		if FELooping == true then
+			local Plr = FindPlr(MainTable["TargetBox"].Text)
+			if not Plr then Notify("Player Not Found",1) FELooping = false return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) FELooping = false return end
+			FELooping = true
+			Notify("FELooping: "..Plr.Name,2)
+			Tween(MainTable["FELoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			coroutine.wrap(function() 
+				while Services["RS"].Stepped:Wait() do
+					if not Plr or not FELooping then break end
+					local Char,Pack = LP.Character or LP.CharacterAdded:Wait(),LP.Backpack
+					local HRP,Hum = Char:WaitForChild("HumanoidRootPart"),Char:WaitForChild("Humanoid")
+					local CL = Hum:Clone();Hum:Destroy();CL.Parent = Char;CL:ChangeState(15)
+					for i,v in pairs(Pack:GetChildren()) do
+						if v:IsA("Tool") then v.Parent = Char end
+					end
+					LP.CharacterAdded:Wait()
+				end
+			end)()
+			coroutine.wrap(function() 
+				while Services["RS"].Stepped:Wait() do
+					if not Plr or not FELooping then break end
+					local Char,PlrChar = LP.Character or LP.CharacterAdded:Wait(),Plr.Character or Plr.CharacterAdded:Wait()
+					local HRP,PlrHRP = Char:WaitForChild("HumanoidRootPart"),PlrChar:WaitForChild("HumanoidRootPart")
+					PlrHRP.CFrame = HRP.CFrame
+					HRP.CFrame = PlrHRP.CFrame
+				end
+			end)()
+		elseif not FELooping then
+			Notify("FELooping: false",2)
+			Tween(MainTable["FELoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onVoidLoop()
+		VoidLooping = not VoidLooping
+		if VoidLooping == true then
+			local Plr = FindPlr(MainTable["TargetBox"].Text)
+			if not Plr then Notify("Player Not Found",1) VoidLooping = false return end
+			local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+			if not PlrChar then Notify("Player has no character (or killed)",1) VoidLooping = false return end
+			VoidLooping = true
+			Notify("VoidLooping: true",2)
+			Tween(MainTable["VoidLoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			coroutine.wrap(function() 
+				local SavedPos = LP.Character.HumanoidRootPart.CFrame
+				while Services["RS"].Stepped:Wait() do
+					if not Plr or not VoidLooping then break end
+					local Char,Pack = LP.Character or LP.CharacterAdded:Wait(),LP.Backpack
+					local HRP,Hum = Char:WaitForChild("HumanoidRootPart"),Char:WaitForChild("Humanoid")
+					local Tool = Pack:FindFirstChildOfClass("Tool")
+					local Stam = Char:FindFirstChild("Stamina")
+					if Stam then Stam:Destroy() end
+					local Equipped = false
+					workspace.FallenPartsDestroyHeight = 0/1/0
+					local CL = Hum:Clone()
+					Hum:Destroy()
+					CL.Parent = Char
+					Tool.Parent = Char
+					Tool.Handle.Massless = true
+					Tool.Parent = workspace
+					Tool.Grip = CFrame.new(0,-10000,0)
+					local BF,BT = Instance.new("BodyForce",HRP),Instance.new("BodyThrust",HRP)
+					BF.Force = Vector3.new(0,math.random(-9e9,-9e8),0)
+					BT.Force = Vector3.new(0,math.random(-9e9,-9e8),0)
+					Tool.AncestryChanged:Connect(function() 
+						Equipped = true
+						BF.Force = Vector3.new(math.huge,math.huge,math.huge)
+						BT.Force = Vector3.new(math.huge,math.huge,math.huge)
+					end)
+					coroutine.wrap(function()
+						local TargRoot;
+						while Services["RS"].Stepped:Wait() do
+							TargRoot = Plr.Character:FindFirstChild("HumanoidRootPart") or Plr.Character:FindFirstChild("UpperTorso") or Plr.Character:FindFirstChild("Torso")
+							CL.Jump = true
+							TargRoot.CFrame = Tool.Handle.CFrame
+							if Equipped or not LP.Character or not Plr.Character or not Tool or not TargRoot then break end
+						end
+					end)()
+					LP.CharacterAdded:Wait()
+					LP.Character:WaitForChild("HumanoidRootPart").CFrame = SavedPos
+					local FF = LP.Character:WaitForChild("ForceField")
+					FF:Destroy()
+				end	
+			end)()
+		elseif VoidLooping == false then
+			Notify("VoidLooping: false",2)
+			Tween(MainTable["VoidLoop"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onAttach()
+		local Plr = FindPlr(MainTable["TargetBox"].Text)
+		if not Plr then Notify("Player Not Found",1) return end
+		local PlrChar = Plr.Character or Plr.CharacterAdded:Wait()
+		if not PlrChar then Notify("Player has no character (or killed)",1) return end
+		local PlrHRP = PlrChar:WaitForChild("HumanoidRootPart")
+		local Char,Pack = LP.Character,LP.Backpack
+		local HRP,Hum = Char.HumanoidRootPart,Char.Humanoid
+		Hum:Destroy();Hum:Clone().Parent = Char
+		for i,v in pairs(Pack:GetChildren()) do
+			if v:IsA("Tool") then v.Parent = Char end
+		end
+		for i = 1,500 do
+			local T = Char:FindFirstChildOfClass("Tool")
+			PlrHRP.CFrame = T.Handle.CFrame
+		end
+		Notify("Attaching: "..Plr.Name,2)
+	end
+	
+	local function onAntiFe()
+		AntiFeing = not AntiFeing
+		if AntiFeing == true then
+			for i,v in pairs(LP.PlayerGui:GetChildren()) do
+				if v:IsA("LocalScript") or v.Name == "LocalScript" then v.Disabled = true end
+			end
+			for i,v in pairs(LP.Backpack:GetChildren()) do
+				if v:IsA("RemoteEvent") and v.Name == "Input" then v.Name = "Input0" end
+			end
+			Notify("AntiFe: "..tostring(AntiFeing),3)
+			Tween(MainTable["AntiFe"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif AntiFeing == false then
+			for i,v in pairs(LP.Backpack:GetChildren()) do
+				if v:IsA("RemoteEvent") and v.Name == "Input0" then v.Name = "Input" end
+			end
+			LP.Character:WaitForChild("Humanoid").Sit = false
+			LP.Character:WaitForChild("Humanoid").Jump = true
+			Notify("AntiFe: "..tostring(AntiFeing),3)
+			Tween(MainTable["AntiFe"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			for i,v in pairs(LP.PlayerGui:GetChildren()) do
+				if v:IsA("LocalScript") or v.Name == "LocalScript" then v.Disabled = false end
+			end
+		end
+	end
+	
+	local function onAntiVoid()
+		AntiVoiding = not AntiVoiding
+		if AntiVoiding == true then
+			Notify("AntiVoid: "..tostring(AntiVoiding),3)
+			Tween(MainTable["AntiVoid"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			local Saved = {}
+			local AntiVC,AntiVP;
+			Saved = LP.Backpack:GetChildren()
+			AntiVC = LP.Character.ChildAdded:Connect(function(x)
+				if not AntiVoiding then AntiVC:Disconnect();Saved = {}; return end
+				if x:IsA("Tool") and not table.find(Saved,x) then
+					x:Destroy()
+					Services["RS"].Stepped:Wait()
+					LP.Character:WaitForChild("Humanoid"):UnequipTools()
+				end
+			end)
+			AntiVP = LP.Backpack.ChildAdded:Connect(function(x)
+				if not AntiVoiding then AntiVC:Disconnect();Saved = {}; return end
+				if x:IsA("Tool") and not table.find(Saved,x) then
+					Services["RS"].Stepped:Wait()
+					x:Destroy()
+				end
+			end)
+		elseif AntiVoiding == false then
+			Notify("AntiVoid: "..tostring(AntiVoiding),3)
+			Tween(MainTable["AntiVoid"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	local Keys, v3, cf = Enum.KeyCode, Vector3.new(), CFrame.new()
+	Services["RS"].Heartbeat:Connect(function()
+		if not Flying then return end
+		local Camera = workspace.CurrentCamera
+		local Human = LP.Character and LP.Character:FindFirstChildWhichIsA('Humanoid')
+		local HRP = Human and Human.RootPart or LP.Character.PrimaryPart
+		if not LP.Character or not Human or not HRP or not Camera then return end
+		for i,v in pairs(LP.PlayerGui:GetChildren()) do
+			if v:IsA("LocalScript") or v.Name == "LocalScript" then v.Disabled = true end
+		end
+		for i,v in pairs(LP.Backpack:GetChildren()) do
+			if v:IsA("RemoteEvent") and v.Name == "Input" then v.Name = "Input0" end
+		end
+		Human:ChangeState(11)
+		for i,v in pairs(LP.Backpack:GetChildren()) do
+			if v:IsA("RemoteEvent") and v.Name == "Input0" then v.Name = "Input" end
+		end
+		for i,v in pairs(LP.PlayerGui:GetChildren()) do
+			if v:IsA("LocalScript") or v.Name == "LocalScript" then v.Disabled = false end
+		end
+		HRP.CFrame = CFrame.new(HRP.Position, HRP.Position + Camera.CFrame.LookVector) * (Services["UIS"]:GetFocusedTextBox() and cf or CFrame.new((Services["UIS"]:IsKeyDown(Keys.D) and SPI) or (Services["UIS"]:IsKeyDown(Keys.A) and -SPI) or 0, (Services["UIS"]:IsKeyDown(Keys.E) and SPI / 2) or (Services["UIS"]:IsKeyDown(Keys.Q) and -SPI / 2) or 0, (Services["UIS"]:IsKeyDown(Keys.S) and SPI) or (Services["UIS"]:IsKeyDown(Keys.W) and -SPI) or 0))
+	end)
+	
+	Services["RS"].Heartbeat:Connect(function()
+		if not AntiFeing then return end
+		LP.Character:WaitForChild("Humanoid").Sit = true
+		LP.Character:WaitForChild("Humanoid"):ChangeState(11)
+	end)
+	
+	for i,v in pairs(TabsFrame:GetChildren()) do
+		if v:IsA("TextButton") then
+			v.MouseEnter:Connect(function()
+				Tween(v,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(225,225,225)})
+				v.MouseLeave:Wait()
+				Tween(v,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(150,150,150)})
+			end)
+		end
+	end
+	
+	local BanBypassing,AntiStomping,GodModing,TPBypassing,NoSlowing,NoRoping = false,false,false,false,false,false
+	
+	local function onBanBypass()
+		BanBypassing = not BanBypassing
+		if BanBypassing == true then
+			local LocalScript = LP.PlayerGui:FindFirstChild("LocalScript")
+			if LocalScript then LocalScript.Disabled = true end
+			Tween(StreetsTable["BanBypass"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif BanBypassing == false then
+			Tween(StreetsTable["BanBypass"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			local LocalScript = LP.PlayerGui:FindFirstChild("LocalScript")
+			if LocalScript then LocalScript.Disabled = false end
+		end
+	end
+	
+	local function onAntiStomp()
+		AntiStomping = not AntiStomping
+		if AntiStomping == true then
+			local FakeDeath = LP.Character:FindFirstChild("FakeDeath")
+			if FakeDeath then FakeDeath:Destroy() end
+			Tween(StreetsTable["AntiStomp"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif AntiStomping == false then
+			Tween(StreetsTable["AntiStomp"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onGodMode()
+		GodModing= not GodModing
+		if GodModing == true then
+			local state;
+			state = LP.Character.Humanoid.StateChanged:Connect(function(old, new)
+				if not GodModing or not LP.Character or not LP.Character:FindFirstChildWhichIsA("Humanoid") then state:Disconnect() return end
+				if new == Enum.HumanoidStateType.PlatformStanding then
+					LP.Character.Humanoid.PlatformStand = false
+				end
+			end)
+			for i,v in pairs(LP.Character:GetDescendants()) do
+				if v:IsA("Motor6D") and v:IsDescendantOf(LP.Character) then
+					local Info = {}
+					Info.Part0 = v.Part0
+					Info.Part1 = v.Part1
+					local p0;
+					local p1;
+					p0 = v:GetPropertyChangedSignal("Part0"):Connect(function() 
+						if not GodModing or not LP.Character then p0:Disconnect() Info = {} return end
+						if v.Part0 ~= Info.Part0 then
+							v.Part0 = Info.Part0
+						end
+					end)
+					p1 = v:GetPropertyChangedSignal("Part1"):Connect(function() 
+						if not GodModing or not LP.Character then p1:Disconnect() Info = {} return end
+						if v.Part1 ~= Info.Part1 then
+							v.Part1 = Info.Part1
+						end
+					end)
+				end
+			end
+			Tween(StreetsTable["GodMode"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif GodModing == false then
+			Tween(StreetsTable["GodMode"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onTPBypass()
+		TPBypassing = not TPBypassing
+		if TPBypassing == true then
+			local Stamina = LP.Character:FindFirstChild("Stamina")
+			if Stamina then Stamina:Destroy() end
+			Tween(StreetsTable["TPBypass"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif TPBypassing == false then
+			Tween(StreetsTable["TPBypass"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onNoSlow()
+		NoSlowing = not NoSlowing
+		if NoSlowing == true then
+			Tween(StreetsTable["NoSlow"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif NoSlowing == false then
+			Tween(StreetsTable["NoSlow"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onNoRope()
+		NoRoping = not NoRoping
+		if NoRoping == true then
+			Tween(StreetsTable["NoRope"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif NoRoping == false then
+			Tween(StreetsTable["NoRope"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local Nearesting,Aimlocking,Camlocking,Capturing = false,false,false,false
+	local Mouse2,Scroll = false,false
+	
+	local function getNearestTarg()
+		if not Nearesting then return end
+		local Players = {}
+		local Player_Hold = {}
+		local Distances = {}
+		for i,v in pairs(Services["P"]:GetPlayers()) do
+			if v ~= LP then
+				table.insert(Players, v)
+			end
+		end
+		for i,v in pairs(Players) do
+			if v.Character ~= nil then
+				local Aim = v.Character:FindFirstChild("Head")
+				local Distance = (v.Character:FindFirstChild("Head").Position - workspace.CurrentCamera.CFrame.p).Magnitude
+				local Ray = Ray.new(workspace.CurrentCamera.CFrame.p, (Mouse.Hit.p - workspace.CurrentCamera.CFrame.p).unit * Distance)
+				local Hit,Pos = workspace:FindPartOnRay(Ray, workspace)
+				local diff = math.floor((Pos - Aim.Position).Magnitude)
+				Player_Hold[v.Name..i] = {}
+				Player_Hold[v.Name..i].dist = Distance
+				Player_Hold[v.Name..i].plr = v
+				Player_Hold[v.Name..i].diff = diff
+				table.insert(Distances, diff)
+			end
+		end
+	
+		if unpack(Distances) == nil then
+			return nil 
+		end
+	
+		local L_Distance = math.floor(math.min(unpack(Distances)))
+		if L_Distance > 1000 then
+			return nil 
+		end
+	
+		for i,v in pairs(Player_Hold) do
+			if v.diff == L_Distance then
+				return v.plr   
+			end
+		end
+		return nil
+	end
+	
+	local function NearestTarg()
+		if not Nearesting then return end
+		local Target;Target = getNearestTarg()
+		if Target ~= nil then
+			StreetsTable["TargetBox"].Text = tostring(Target)
+		end
+	end
+	
+	local function Aimlock()
+		if not Scroll then return end
+		if not Aimlocking then return end
+		local Char,Pack = LP.Character,LP.Backpack
+		if not Char or not Pack then return end
+		local FindPlr = Services["P"]:FindFirstChild(StreetsTable["TargetBox"].Text)
+		if not FindPlr then return end
+		local FindPlrChar = FindPlr.Character
+		if not FindPlrChar then return end
+		local Target = FindPlrChar
+		local Input = Pack:FindFirstChild("Input")
+		local Gun = Char:FindFirstChildOfClass("Tool")
+		if not Gun or not Input then return end
+		local Ammo = Gun.Ammo
+		if not Ammo then return end
+		if Ammo.Value == 0 then return end
+		local AimPart = "HumanoidRootPart"
+		local AimVelocity = 5
+		local Pos = Target[AimPart].Position
+		local Velocity = Target[AimPart].Velocity/AimVelocity
+		Input:FireServer("m1", {mousehit = CFrame.new(Pos + Velocity)})
+	end
+	
+	local function Camlock()
+		if not Mouse2 then return end
+		if not Camlocking then return end
+		local Char,Pack = LP.Character,LP.Backpack
+		if not Char or not Pack then return end
+		local FindPlr = Services["P"]:FindFirstChild(StreetsTable["TargetBox"].Text)
+		if not FindPlr then return end
+		local FindPlrChar = FindPlr.Character
+		if not FindPlrChar then return end
+		local Target = FindPlrChar
+		local AimPart = "HumanoidRootPart"
+		local AimVelocity = 5
+		local Pos = Target[AimPart].Position
+		local Velocity = Target[AimPart].Velocity/AimVelocity
+		Cam.CFrame = CFrame.new(Cam.CFrame.p, Pos + Velocity)
+	end
+	
+	local function onAimlock()
+		Aimlocking = not Aimlocking
+		if Aimlocking == true then
+			Tween(StreetsTable["Aimlock"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif Aimlocking == false then
+			Tween(StreetsTable["Aimlock"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onCamlock()
+		Camlocking = not Camlocking
+		if Camlocking == true then
+			Tween(StreetsTable["Camlock"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+		elseif Camlocking == false then
+			Tween(StreetsTable["Camlock"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onNearest()
+		Nearesting = not Nearesting
+		if Nearesting == true then
+			Tween(StreetsTable["Nearest"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			Tween(StreetsTable["Capture"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			Capturing = false
+		elseif Nearesting == false then
+			Tween(StreetsTable["Nearest"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function onCapture()
+		Capturing = not Capturing
+		if Capturing == true then
+			Tween(StreetsTable["Capture"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(0,170,0)})
+			Tween(StreetsTable["Nearest"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+			Nearesting = false
+		elseif Capturing == false then
+			Tween(StreetsTable["Capture"].Btn,.5,"Quint","Out",{TextColor3 = Color3.fromRGB(170,0,0)})
+		end
+	end
+	
+	local function ClientSided()
+		
+	end
+	
+	local function Regular()
+		
+	end
+	
+	local function Streets()
+		
+	end
+	
+	local onMain,onStreets,onAudio,onMisc = function()
+		PageLayout:JumpToIndex(0)
+		Tween(Tabs["Slider"],.5,"Quint","Out",{Position = UDim2.new(0.075, 0,0.92, 0)})
+	end,function()
+		PageLayout:JumpToIndex(1)
+		Tween(Tabs["Slider"],.5,"Quint","Out",{Position = UDim2.new(0.325, 0,0.92, 0)})
+	end,function()
+		PageLayout:JumpToIndex(2)
+		Tween(Tabs["Slider"],.5,"Quint","Out",{Position = UDim2.new(0.575, 0,0.92, 0)})
+	end,function()
+		PageLayout:JumpToIndex(3)
+		Tween(Tabs["Slider"],.5,"Quint","Out",{Position = UDim2.new(0.825, 0,0.92, 0)})
+	end
+	
+	LP.CharacterAdded:Connect(function(Char)
+		repeat wait() until Char and Char:WaitForChild("HumanoidRootPart") and Char:WaitForChild("Humanoid") and LP:HasAppearanceLoaded()
+		if BanBypassing then
+			local LocalScript = LP.PlayerGui:FindFirstChild("LocalScript")
+			if LocalScript then LocalScript.Disabled = true end
+		end
+		if AntiStomping then
+			local FakeDeath = LP.Character:FindFirstChild("FakeDeath")
+			if FakeDeath then FakeDeath:Destroy() end
+		end
+		if GodModing then
+			local state;
+			state = Char.Humanoid.StateChanged:Connect(function(old, new)
+				if not GodModing or not LP.Character or not LP.Character:FindFirstChildWhichIsA("Humanoid") then state:Disconnect() return end
+				if new == Enum.HumanoidStateType.PlatformStanding then
+					Char.Humanoid.PlatformStand = false
+				end
+			end)
+			for i,v in pairs(Char:GetDescendants()) do
+				if v:IsA("Motor6D") and v:IsDescendantOf(Char) then
+					local Info = {}
+					Info.Part0 = v.Part0
+					Info.Part1 = v.Part1
+					local p0;
+					local p1;
+					p0 = v:GetPropertyChangedSignal("Part0"):Connect(function() 
+						if not GodModing or not LP.Character then p0:Disconnect() Info = {} return end
+						if v.Part0 ~= Info.Part0 then
+							v.Part0 = Info.Part0
+						end
+					end)
+					p1 = v:GetPropertyChangedSignal("Part1"):Connect(function() 
+						if not GodModing or not LP.Character then p1:Disconnect() Info = {} return end
+						if v.Part1 ~= Info.Part1 then
+							v.Part1 = Info.Part1
+						end
+					end)
+				end
+			end
+		end
+		if TPBypassing then
+			local Stamina = LP.Character:FindFirstChild("Stamina")
+			if Stamina then Stamina:Destroy() end
+		end
+	end)
+	
+	local function onWorkspaceAdded(x)
+		if x:IsA("Folder") and x.Name == "GunSlow" and x:IsDescendantOf(LP.Character) then
+			if not NoSlowing then return end
+			Services["RS"].Stepped:Wait()
+			x:Destroy()
+		elseif x:IsA("Folder") and x.Name == "Roped" and x:IsDescendantOf(LP.Character) then
+			if not NoRoping then return end
+			Services["RS"].Stepped:Wait()
+			x:Destroy()
+		elseif x:IsA("BoolValue") and x.Name == "KOd" and x:IsDescendantOf(LP.Character) then
+			if not GodModing then return end
+			Services["RS"].Stepped:Wait()
+			x:Destroy()
+		elseif x:IsA("Part") and x.Name == "Bone" and x:IsDescendantOf(LP.Character) then
+			if not GodModing then return end
+			Services["RS"].Stepped:Wait()
+			x:Destroy()
+		end
+	end
+	
+	local function onInputBgn(Input, Processed)
+		if Processed then return end
+		if Input.KeyCode == Enum.KeyCode.Semicolon then
+			Services["RS"].Stepped:Wait()
+			SearchBox:CaptureFocus()
+		end
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			local Target = Mouse.Target
+			if Target then
+				local Hum = Target.Parent:FindFirstChildWhichIsA("Humanoid") or Target.Parent.Parent:FindFirstChildWhichIsA("Humanoid")
+				if Hum then
+					local SelectedPlayer = Services["P"]:FindFirstChild(Hum.Parent.Name)
+					if SelectedPlayer then
+						MainTable["TargetBox"].Text = SelectedPlayer.Name
+						if Capturing then
+							StreetsTable["TargetBox"].Text = SelectedPlayer.Name
+						end
+					end
+				end
+			end
+		end
+		if Input.UserInputType == Enum.UserInputType.MouseButton2 then Mouse2 = true end
+		if Input.UserInputType == Enum.UserInputType.MouseButton3 then Scroll = true end
+	end
+	
+	local function onInputEnd(Input, Processed)
+		if Processed then return end
+		if Input.UserInputType == Enum.UserInputType.MouseButton2 then Mouse2 = false end
+		if Input.UserInputType == Enum.UserInputType.MouseButton3 then Scroll = false end
+	end
+	
+	Services["W"].DescendantAdded:Connect(onWorkspaceAdded)
+	
+	Tabs["Main"].MouseButton1Click:Connect(onMain)
+	Tabs["Streets"].MouseButton1Click:Connect(onStreets)
+	Tabs["Audio"].MouseButton1Click:Connect(onAudio)
+	Tabs["Misc"].MouseButton1Click:Connect(onMisc)
+	
+	MainTable["Check"].Btn.MouseButton1Click:Connect(onCheck)
+	MainTable["View"].Btn.MouseButton1Click:Connect(onView)
+	MainTable["FELoop"].Btn.MouseButton1Click:Connect(onFELoop)
+	MainTable["VoidLoop"].Btn.MouseButton1Click:Connect(onVoidLoop)
+	MainTable["Attach"].Btn.MouseButton1Click:Connect(onAttach)
+	MainTable["AntiFe"].Btn.MouseButton1Click:Connect(onAntiFe)
+	MainTable["AntiVoid"].Btn.MouseButton1Click:Connect(onAntiVoid)
+	
+	StreetsTable["BanBypass"].Btn.MouseButton1Click:Connect(onBanBypass)
+	StreetsTable["AntiStomp"].Btn.MouseButton1Click:Connect(onAntiStomp)
+	StreetsTable["GodMode"].Btn.MouseButton1Click:Connect(onGodMode)
+	StreetsTable["TPBypass"].Btn.MouseButton1Click:Connect(onTPBypass)
+	StreetsTable["NoSlow"].Btn.MouseButton1Click:Connect(onNoSlow)
+	StreetsTable["NoRope"].Btn.MouseButton1Click:Connect(onNoRope)
+	StreetsTable["Aimlock"].Btn.MouseButton1Click:Connect(onAimlock)
+	StreetsTable["Camlock"].Btn.MouseButton1Click:Connect(onCamlock)
+	StreetsTable["Nearest"].Btn.MouseButton1Click:Connect(onNearest)
+	StreetsTable["Capture"].Btn.MouseButton1Click:Connect(onCapture)
+	
+	SearchBox.FocusLost:Connect(onCommand)
+	Services["UIS"].InputBegan:Connect(onInputBgn)
+	Services["UIS"].InputEnded:Connect(onInputEnd)
+	Services["RS"].Stepped:Connect(NearestTarg)
+	Services["RS"].Stepped:Connect(Aimlock)
+	Services["RS"].Stepped:Connect(Camlock)
+	MainTable["TargetBox"].FocusLost:Connect(onMainTarget)
+	StreetsTable["TargetBox"].FocusLost:Connect(onStreetsTarget)
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		local Goal = {}
+		Goal.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		Services["TS"]:Create(MainFrame,TweenInfo.new(0.1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out),Goal):Play()
+	end
+	
+	MainFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = MainFrame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	MainFrame.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	Services["UIS"].InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+	
+	Notify("Welcome to Jinxed v1.0, "..LP.Name,5)
+end
+coroutine.wrap(QRCCBV_fake_script)()
