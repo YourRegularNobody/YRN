@@ -5,7 +5,7 @@ game:GetService("RunService").RenderStepped:connect(function()
     if _G.active then
         for _,X in pairs(game.Players:GetChildren()) do
             if X.Name ~= LocalPlayer.Name then
-                X.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(3, 0, 3) * LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 2
+                X.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(1.5, 0, 1.5) * LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1.5
             end
         end
     end
