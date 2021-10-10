@@ -1,0 +1,16 @@
+local LocalPlayer = game:GetService("Players").LocalPlayer
+_G.active = false
+
+game:GetService("RunService").RenderStepped:connect(function()
+    if _G.active then
+for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetChildren()) do
+   if string.find(v.Name,"Scale") and v.Name ~= "HeadScale" then
+       repeat wait(0) until game.Players.LocalPlayer.Character.Head:FindFirstChild("OriginalSize")
+       game.Players.LocalPlayer.Character.Head.OriginalSize:Destroy()
+       v:Destroy()
+       game.Players.LocalPlayer.Character.Head:WaitForChild("OriginalSize")
+       game.Players.LocalPlayer.Character.Head.OriginalSize:Destroy()
+   end
+end
+end
+end)
