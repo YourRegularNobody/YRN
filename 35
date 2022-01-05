@@ -1,5 +1,5 @@
 local LocalPlayer = game:GetService("Players").LocalPlayer
-_G.active = true
+_G.active = false
 
 game:GetService("RunService").RenderStepped:connect(function()
     if _G.active then
