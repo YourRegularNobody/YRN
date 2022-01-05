@@ -1,8 +1,8 @@
 local LocalPlayer = game:GetService("Players").LocalPlayer
-_G.active = true
+_A.active = true
 
 game:GetService("RunService").RenderStepped:connect(function()
-    if _G.active then
+    if _A.active then
 while true do
 local LP = game:GetService("Players").LocalPlayer
 for i,v in pairs(game:GetService("Players"):GetPlayers()) do
