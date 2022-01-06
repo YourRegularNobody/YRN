@@ -3,20 +3,10 @@ _G.active = false
 
 game:GetService("RunService").RenderStepped:connect(function()
     if _G.active then
-while true do
-local LP = game:GetService("Players").LocalPlayer
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v and v.Character and v ~= LP and v.Character:FindFirstChild("Head") then
-local hrp = v.Character:FindFirstChild("HumanoidRootPart")
-hrp.Transparency = 0
-hrp.BrickColor = v.TeamColor
-hrp.CanCollide = false
-pcall(function()
-hrp.CFrame = LP.Character.HumanoidRootPart.CFrame * CFrame.new(1,0,-3.5)
-end)
-end
-end
-wait(.1)
-end
-end
+        for _,X in pairs(game.Players:GetChildren()) do
+            if X.Name ~= LocalPlayer.Name then
+                X.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(1, 0, 1) * LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
+            end
+        end
+    end
 end)
