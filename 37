@@ -1,3 +1,7 @@
+getgenv()._SETTINGS = {
+    NoAnimations = false
+}
+
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
 local Workspace = game:GetService("Workspace")
@@ -61,10 +65,10 @@ local env = {
 		local AlignPosition = Instance.new("AlignPosition", Part0)
 		local AlignOrientation = Instance.new("AlignOrientation", Part0)
 		
-		AlignPosition.MaxForce = 9e9
-		AlignPosition.Responsiveness = 200
-		AlignOrientation.MaxTorque = 9e9
-		AlignOrientation.Responsiveness = 200
+		AlignPosition.MaxForce = math.huge
+		AlignPosition.Responsiveness = 5000
+		AlignOrientation.MaxTorque = math.huge
+		AlignOrientation.Responsiveness = 5000
 
 		AlignPosition.Attachment0 = Attachment0
 		AlignPosition.Attachment1 = Attachment1
@@ -76,7 +80,7 @@ local env = {
 
 			Attachment0.Position = Vector3.new(0, 0, 0)
 			Attachment0.Orientation = Vector3.new(90, 0, 0)
-            
+
 		else
 			Attachment0.Position = Vector3.new(0, 0, 0)
 			Attachment0.Orientation = Vector3.new(0, 0, 0)
@@ -150,7 +154,7 @@ env.NoclipCharacter(ScriptCharacter)
 env.NoclipCharacter(LocalCharacter)
 env.UnAnchorCharacter(ScriptCharacter)
 env.UnAnchorCharacter(LocalCharacter)
-env.SimulationNet(LocalPlayer, 0)
+env.SimulationNet(LocalPlayer, math.huge)
 env.ClearWelds(LocalCharacter)
 env.Remove(LocalCharacter["HumanoidRootPart"])
 env.Movement(LocalCharacter, ScriptCharacter)
