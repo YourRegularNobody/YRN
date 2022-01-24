@@ -1,0 +1,32 @@
+local plr = game.Players.LocalPlayer
+local enable = true
+
+local distance = -math.huge
+
+local cf1
+local cf2
+
+if not plr.Character then plr.CharacterAdded:Wait() end
+
+plr.Character.Humanoid.Died:Connect(function() 
+    enable = false
+    return
+end)
+
+while enable do
+    pcall(function() cf1 = plr.Character.HumanoidRootPart.CFrame end)
+    wait(0)
+    pcall(function() cf2 = plr.Character.HumanoidRootPart.CFrame end)
+    
+    if not cf1 or not cf2 then 
+        enable = false
+        return 
+    end
+    
+    local d = (cf1.Position - cf2.Position).Magnitude
+    if d > distance then
+        pcall(function()
+            plr.Character.HumanoidRootPart.CFrame = cf1 
+        end)
+    end
+end
