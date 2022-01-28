@@ -1,7 +1,7 @@
 local plr = game.Players.LocalPlayer
 local enable = true
 
-local distance = -math.huge
+local distance = 100
 
 local cf1
 local cf2
