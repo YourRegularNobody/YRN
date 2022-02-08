@@ -24,19 +24,20 @@ end
 
 rm()
 Humanoid:FindFirstChild("BodyTypeScale"):Destroy()
-wait(.4)
+wait(.35)
 
 rm()
 Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
-wait(.4)
+
+wait(.35)
 
 rm()
 Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
-wait(.4)
+wait(.34)
 
 rm()
 Humanoid:FindFirstChild("HeadScale"):Destroy()
-wait(.4)
+wait(.34)
 
 rm()
 Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
